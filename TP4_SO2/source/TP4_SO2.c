@@ -43,15 +43,15 @@
 /*Se incluye FreeRTOS.h para poder crear tareas y ejecutar el Scheduler*/
 #include "FreeRTOS.h"
 #include "task.h"
-
+#include "queue.h"
 /* TODO: insert other definitions and declarations here. */
 
 /*Definimos una función usando la convención*/
 void vPrint(void *pvParameter){
     for(;;){
     	printf("Hello World\n");
+        vTaskDelay(500);
     }
-    vTaskDelay(1000);
 }
 /*
  * @brief   Application entry point.
@@ -61,9 +61,11 @@ int main(void) {
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
-
+    /*No se puede correr el programa si no está esta línea.
+     El programa finaliza en xTaskCreate()*/
+    vTraceEnable(TRC_START);
     xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);
-    printf("Hello World\n");
+    //printf("Hello World\n");
     vTaskStartScheduler();
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;

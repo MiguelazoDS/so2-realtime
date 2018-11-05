@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/TP4_SO2.c 
+../source/TP4_SO2.c \
+../source/semihost_hardfault.c 
 
 OBJS += \
-./source/TP4_SO2.o 
+./source/TP4_SO2.o \
+./source/semihost_hardfault.o 
 
 C_DEPS += \
-./source/TP4_SO2.d 
+./source/TP4_SO2.d \
+./source/semihost_hardfault.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

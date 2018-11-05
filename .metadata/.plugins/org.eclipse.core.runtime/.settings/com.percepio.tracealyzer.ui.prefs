@@ -3,5 +3,5 @@ rtosType=FreeRTOS
 sameFileHandling=Do nothing
 traceBufferAddressExpression=RecorderDataPtr
 traceBufferSizeExpression=sizeof(*RecorderDataPtr)
-tracealyzerPath=/home/miguel/Downloads/Tracealyzer-4.2.6-linux64/Tracealyzer.exe
-tracealyzerPreviousPaths=/usr/bin;/home/miguel/Downloads/Tracealyzer-4.2.6-linux64/Tracealyzer.exe
+tracealyzerPath=/home/miguel/Documents/Tracealyzer-4.2.7-linux64/Tracealyzer.exe
+tracealyzerPreviousPaths=/usr/bin;/home/miguel/Downloads/Tracealyzer-4.2.6-linux64/Tracealyzer.exe;/home/miguel/Documents/Tracealyzer-4.2.7-linux64/Tracealyzer.exe
