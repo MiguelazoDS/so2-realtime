@@ -75,6 +75,14 @@ void vProductor(void *pvParameter){
 		}
 		printf("Guardo en la cola: %s\n", xMessage.ucData);
 		vTaskDelay(2000/portTICK_RATE_MS);
+
+		strcpy(xMessage.ucData, "Chau Mundo!");
+		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS )
+		{
+			printf("No se pudo escribir en la cola\n");
+		}
+		printf("Guardo en la cola: %s\n", xMessage.ucData);
+		vTaskDelay(2000/portTICK_RATE_MS);
     }
 }
 
@@ -124,7 +132,7 @@ int main(void) {
     xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);
     /*xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);
     xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);*/
-    xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 1, NULL);
+    xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 2, NULL);
 
     vTaskStartScheduler();
     /* Force the counter to be placed into memory. */

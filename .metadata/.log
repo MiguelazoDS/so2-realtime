@@ -11385,3 +11385,36 @@ Caused by: java.io.IOException: Output Stream is closed
 
 !ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:47:29.325
 !MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:27.164
+!MESSAGE ContextManager.reportStatus(): Context for Session 28 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:55:28.953
+!MESSAGE Telnet session connected on port 2333->50968 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:54.717
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:54.732
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:54.742
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x20002908
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:55:54.742
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x20002908 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:54.744
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:56.163
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:55:56.164
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_11.55.56.163.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 11:55:56.166
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_11.55.56.163.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:56:01.740
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
