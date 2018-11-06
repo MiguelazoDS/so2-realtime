@@ -92,11 +92,29 @@ void vTeclado (void *pvParameter){
 	}
 }
 
-void vSensor (void *pvParameter){
-	for(;;){
+int aleatorio (int max){
+	return rand()%max;
+}
 
+void vSensor (void *pvParameter){
+	int temperatura;
+	QueueHandle_t xQueue;
+	xQueue = (QueueHandle_t) pvParameter;
+	AMessage xMessage;
+
+	for(;;){
+		do {
+			temperatura = aleatorio (31);
+			itoa(temperatura,xMessage.ucData, 10);
+		}while(temperatura < 10);
+		printf("Lectura del sensor: %d\n", temperatura);
+		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS ){
+			printf("No se pudo escribir en la cola\n");
+		}
+		vTaskDelay(2000/portTICK_RATE_MS);
 	}
 }
+
 void vConsumidor(void *pvParameter){
     QueueHandle_t xQueue;
     xQueue = (QueueHandle_t) pvParameter;
@@ -107,7 +125,6 @@ void vConsumidor(void *pvParameter){
 		}
 		printf("Leí de la cola el mensaje: %s\n",xMessage.ucData);
     }
-
 }
 
 /*
@@ -129,9 +146,9 @@ int main(void) {
 
     /*No agreamos esta tarea*/
     /*xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);*/
-    xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);
-    /*xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);
-    xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);*/
+    /*xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);*/
+    /*xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);*/
+    xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);
     xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 2, NULL);
 
     vTaskStartScheduler();
