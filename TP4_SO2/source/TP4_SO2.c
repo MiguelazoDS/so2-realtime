@@ -96,17 +96,18 @@ void vTeclado (void *pvParameter){
 	int longitud;
 
 	for(;;){
-		/*longitud = rand()%20+1;*/
-		/*do {
-			letra = rand()%123;
-		} while(letra < 97);*/
-		/*longitud =rand()%20+1;*/
-		pxDelay = rand()%5000;
-		if(pxDelay < 1000){
-			pxDelay += 1000;
+		for(i=0;i<20;i++){
+			xMessage.ucData[i]='\0';
 		}
-		pxDelay=2000;
-		//printf("Soy una letra: %c\n",letra);
+		longitud = rand()%19+1;
+		pxDelay = rand()%3000+500;
+		for(i=0;i<longitud;i++){
+			xMessage.ucData[i]=rand()%25+97;
+		}
+		printf("Soy una cadena: %s\n",xMessage.ucData);
+		for(i=0;i<20;i++){
+			xMessage.ucData[i]='\0';
+		}
 		vTaskDelay(pxDelay/portTICK_RATE_MS);
 	}
 }

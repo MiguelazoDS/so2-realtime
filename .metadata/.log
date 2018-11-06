@@ -103,3 +103,122 @@ Created Time: 2018-11-06 12:58:31.772
 
 !ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:14:15.667
 !MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:19:33.089
+!MESSAGE ContextManager.reportStatus(): Context for Session 71 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:19:34.921
+!MESSAGE Telnet session connected on port 2333->51678 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:19:54.013
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:21:05.151
+!MESSAGE ContextManager.reportStatus(): Context for Session 72 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:21:06.928
+!MESSAGE Telnet session connected on port 2333->51686 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:21:25.065
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:22:28.137
+!MESSAGE ContextManager.reportStatus(): Context for Session 74 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:22:29.939
+!MESSAGE Telnet session connected on port 2333->51700 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:22:40.570
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:25:38.942
+!MESSAGE ContextManager.reportStatus(): Context for Session 76 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:25:40.721
+!MESSAGE Telnet session connected on port 2333->51718 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:25:56.644
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:27:41.111
+!MESSAGE ContextManager.reportStatus(): Context for Session 77 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:27:42.903
+!MESSAGE Telnet session connected on port 2333->51736 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:28:01.689
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:39:24.528
+!MESSAGE ContextManager.reportStatus(): Context for Session 79 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:39:26.314
+!MESSAGE Telnet session connected on port 2333->51820 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:39:37.534
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:42:24.740
+!MESSAGE ContextManager.reportStatus(): Context for Session 80 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:42:26.564
+!MESSAGE Telnet session connected on port 2333->51850 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:42:37.342
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:43:38.070
+!MESSAGE ContextManager.reportStatus(): Context for Session 81 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:43:39.887
+!MESSAGE Telnet session connected on port 2333->51868 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:43:50.084
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:44:20.130
+!MESSAGE ContextManager.reportStatus(): Context for Session 82 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-11-06 13:44:20.564
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Source lookup error
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:172)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:220)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:200)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Contains: Target not available.
+Contains: Target not available.
+!SUBENTRY 1 org.eclipse.debug.core 4 125 2018-11-06 13:44:20.575
+!MESSAGE Source lookup error
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 10001 2018-11-06 13:44:20.575
+!MESSAGE Target not available.
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 10001 2018-11-06 13:44:20.576
+!MESSAGE Target not available.
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:44:21.580
+!MESSAGE Telnet session connected on port 2333->51872 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:44:48.362
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:45:15.045
+!MESSAGE ContextManager.reportStatus(): Context for Session 83 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:45:16.497
+!MESSAGE Telnet session connected on port 2333->51882 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:45:44.509
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:46:24.985
+!MESSAGE ContextManager.reportStatus(): Context for Session 84 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:46:26.819
+!MESSAGE Telnet session connected on port 2333->51890 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:46:46.183
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
