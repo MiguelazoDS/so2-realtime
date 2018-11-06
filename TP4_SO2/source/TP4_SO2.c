@@ -39,6 +39,7 @@
 #include "clock_config.h"
 #include "MK64F12.h"
 #include "string.h"
+#include <stdlib.h>
 /* TODO: insert other include files here. */
 /*Se incluye FreeRTOS.h para poder crear tareas y ejecutar el Scheduler*/
 #include "FreeRTOS.h"
@@ -91,7 +92,6 @@ void vTeclado (void *pvParameter){
 	xQueue = (QueueHandle_t) pvParameter;
 	AMessage xMessage;
 	TickType_t pxDelay;
-	int letra;
 	int i;
 	int longitud;
 
@@ -104,7 +104,10 @@ void vTeclado (void *pvParameter){
 		for(i=0;i<longitud;i++){
 			xMessage.ucData[i]=rand()%25+97;
 		}
-		printf("Soy una cadena: %s\n",xMessage.ucData);
+		printf("Escribo el siguiente texto: %s\n", xMessage.ucData);
+		if( xQueueSendToBack( xQueue, &xMessage, 3500/portTICK_RATE_MS ) != pdPASS ){
+			printf("No se pudo escribir en la cola\n");
+		}
 		for(i=0;i<20;i++){
 			xMessage.ucData[i]='\0';
 		}

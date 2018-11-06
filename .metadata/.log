@@ -222,3 +222,368 @@ Contains: Target not available.
 
 !ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:46:46.183
 !MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:29.414
+!MESSAGE ContextManager.reportStatus(): Context for Session 85 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:48:30.777
+!MESSAGE Telnet session connected on port 2333->51912 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:43.424
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:43.433
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:43.438
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x200029F0
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:48:43.438
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x200029f0 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:43.439
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:44.877
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:48:44.904
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_13.48.44.877.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 13:48:44.948
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_13.48.44.877.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:48:47.963
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:49:34.397
+!MESSAGE ContextManager.reportStatus(): Context for Session 86 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:49:35.741
+!MESSAGE Telnet session connected on port 2333->51928 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:49:46.597
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:51:45.777
+!MESSAGE ContextManager.reportStatus(): Context for Session 87 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:51:47.599
+!MESSAGE Telnet session connected on port 2333->51942 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:52:09.025
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:52:50.263
+!MESSAGE ContextManager.reportStatus(): Context for Session 88 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:52:51.795
+!MESSAGE Telnet session connected on port 2333->51950 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:53:06.704
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:53:33.539
+!MESSAGE ContextManager.reportStatus(): Context for Session 89 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:53:34.947
+!MESSAGE Telnet session connected on port 2333->51958 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2018-11-06 13:55:03.467
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.debug.core.sourcelookup.CProjectSourceContainer.createFolderSourceContainers(CProjectSourceContainer.java:236)
+	at org.eclipse.cdt.debug.core.sourcelookup.CProjectSourceContainer.createSourceContainers(CProjectSourceContainer.java:216)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:69)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:100)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:117)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.debugcommon 4 0 2018-11-06 13:55:03.554
+!MESSAGE There is already a running debug session for the launch configuration 'TP4_SO2 JLink Debug'.
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:55:07.978
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:14.864
+!MESSAGE ContextManager.reportStatus(): Context for Session 91 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:55:16.206
+!MESSAGE Telnet session connected on port 2333->51968 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:54.147
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:54.150
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:54.179
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x200029F0
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:55:54.179
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x200029f0 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:54.180
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:55.667
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:55:55.668
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_13.55.55.667.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 13:55:55.670
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_13.55.55.667.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:56:22.012
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:56:55.276
+!MESSAGE ContextManager.reportStatus(): Context for Session 92 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:56:56.613
+!MESSAGE Telnet session connected on port 2333->51986 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:05.799
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:05.830
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:05.839
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x200029F0
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:57:05.840
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x200029f0 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:05.841
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:07.378
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:07.379
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_13.57.07.378.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 13:57:07.388
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_13.57.07.378.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:57:10.730
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:57:25.871
+!MESSAGE ContextManager.reportStatus(): Context for Session 93 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:57:27.208
+!MESSAGE Telnet session connected on port 2333->51994 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:10.882
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:10.891
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:10.920
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x200029F0
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:58:10.920
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x200029f0 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:10.920
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:12.473
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:58:12.475
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_13.58.12.474.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 13:58:12.480
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_13.58.12.474.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:58:16.956
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:59:17.964
+!MESSAGE ContextManager.reportStatus(): Context for Session 94 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:59:19.306
+!MESSAGE Telnet session connected on port 2333->52018 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 13:59:26.078
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.crt.log 4 -1 2018-11-06 13:59:26.420
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.lf(MCXTelnetService.java:451)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.shutdown(MCXTelnetService.java:196)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:283)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:462)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:295)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:304)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:209)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:225)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.lf(MCXTelnetService.java:442)
+	... 14 more
+
+!ENTRY com.crt.log 4 -1 2018-11-06 13:59:26.439
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.lf(MCXTelnetService.java:451)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.shutdown(MCXTelnetService.java:196)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:283)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:215)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:283)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2245)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:330)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:316)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:446)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:433)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1043)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:703)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:834)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:462)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:295)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:179)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:304)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:209)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:225)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.lf(MCXTelnetService.java:442)
+	... 20 more
+
+!ENTRY com.crt.log 4 -1 2018-11-06 13:59:26.440
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.log(MCXTelnetService.java:418)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.shutdown(MCXTelnetService.java:197)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:283)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:462)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:295)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:274)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.log(MCXTelnetService.java:412)
+	... 14 more
+
+!ENTRY com.crt.log 4 -1 2018-11-06 13:59:26.470
+!MESSAGE Document is closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Document is closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.log(MCXTelnetService.java:418)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.shutdown(MCXTelnetService.java:197)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:283)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.launchesRemoved(MCXTelnetService.java:215)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:283)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:2245)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.removeTerminatedLaunches(LaunchConfigurationManager.java:330)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.launchAdded(LaunchConfigurationManager.java:316)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.run(LaunchManager.java:446)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchNotifier.notify(LaunchManager.java:433)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1043)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:703)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:834)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:462)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:295)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:290)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:274)
+	at com.crt.dsfdebug.dsf.services.MCXTelnetService.log(MCXTelnetService.java:412)
+	... 20 more
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 13:59:32.396
+!MESSAGE ContextManager.reportStatus(): Context for Session 95 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 13:59:33.742
+!MESSAGE Telnet session connected on port 2333->52028 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:04.090
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:04.093
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:04.098
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x200029F0
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 14:01:04.098
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x200029f0 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:04.098
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:05.656
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 14:01:05.659
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_14.01.05.656.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 14:01:05.673
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_14.01.05.656.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 14:01:11.743
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
