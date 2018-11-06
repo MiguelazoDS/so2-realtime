@@ -11268,3 +11268,120 @@ Caused by: java.io.IOException: Output Stream is closed
 
 !ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:28:55.780
 !MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:14.117
+!MESSAGE ContextManager.reportStatus(): Context for Session 23 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:32:15.437
+!MESSAGE Telnet session connected on port 2333->50806 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:31.155
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:31.158
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:31.187
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x20002908
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:32:31.188
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x20002908 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:31.188
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:32.672
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:32.676
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_11.32.32.673.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 11:32:32.733
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_11.32.32.673.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:32:46.779
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:32:55.249
+!MESSAGE ContextManager.reportStatus(): Context for Session 24 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:32:56.573
+!MESSAGE Telnet session connected on port 2333->50818 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:37.526
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:37.532
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:37.539
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x20002908
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:33:37.540
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x20002908 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:37.540
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:38.975
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:33:38.977
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_11.33.38.975.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 11:33:38.989
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_11.33.38.975.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:33:46.752
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:39:29.544
+!MESSAGE ContextManager.reportStatus(): Context for Session 25 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:39:31.003
+!MESSAGE Telnet session connected on port 2333->50874 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:14.279
+!MESSAGE TraceFileReader.reportStatus(): Context retreived
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:14.286
+!MESSAGE TraceFileReader.reportStatus(): Read Trace size: 102424
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:14.310
+!MESSAGE TraceFileReader.reportStatus(): Read Trace address: 0x20002908
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:40:14.310
+!MESSAGE MemoryReader.readMemoryAsync(): Reading memory for: 0x20002908 (size: 102424)
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:14.311
+!MESSAGE MemoryReader.tryReadMemory(): Memory adapter: com.nxp.mcuxpresso.core.debug.services.peripherals.MCXPeripheralMemoryBlockRetrieval
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:15.738
+!MESSAGE TraceFileReader.reportStatus(): Read 102424 bytes from memory
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:40:15.739
+!MESSAGE TraceFileReader.reportStatus(): Successfully written 102424 bytes to file: '/home/miguel/traces/2018-11-06_11.40.15.738.bin'
+
+!ENTRY com.percepio.tracealyzer.ui 0 0 2018-11-06 11:40:15.751
+!MESSAGE .runRequest.onSuccess(): Saved trace to file '/home/miguel/traces/2018-11-06_11.40.15.738.bin' (as argument)
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:40:21.867
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:46:27.479
+!MESSAGE ContextManager.reportStatus(): Context for Session 26 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:46:29.248
+!MESSAGE Telnet session connected on port 2333->50914 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:46:55.047
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 11:47:14.394
+!MESSAGE ContextManager.reportStatus(): Context for Session 27 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 11:47:16.205
+!MESSAGE Telnet session connected on port 2333->50924 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 11:47:29.325
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended

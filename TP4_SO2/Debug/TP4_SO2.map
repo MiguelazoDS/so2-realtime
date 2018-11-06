@@ -116,6 +116,9 @@ Discarded input sections
  .data          0x0000000000000000        0x0 ./source/TP4_SO2.o
  .bss           0x0000000000000000        0x0 ./source/TP4_SO2.o
  .text.vPrint   0x0000000000000000       0x1c ./source/TP4_SO2.o
+ .text.vTeclado
+                0x0000000000000000        0xa ./source/TP4_SO2.o
+ .text.vSensor  0x0000000000000000        0xa ./source/TP4_SO2.o
  .debug_macro   0x0000000000000000      0xa9c ./source/TP4_SO2.o
  .group         0x0000000000000000        0xc ./source/semihost_hardfault.o
  .text          0x0000000000000000        0x0 ./source/semihost_hardfault.o
@@ -3212,7 +3215,7 @@ END GROUP
 .bss            0x0000000020000018    0x1bb68
                 0x0000000020000018                _bss = .
  *(SORT_BY_ALIGNMENT(.bss*))
- .bss.i.7988    0x0000000020000018        0x4 ./source/TP4_SO2.o
+ .bss.i.7996    0x0000000020000018        0x4 ./source/TP4_SO2.o
  .bss.s_uartHandle
                 0x000000002000001c       0x18 ./drivers/fsl_uart.o
  .bss.s_uartIsr
@@ -3394,98 +3397,98 @@ END GROUP
                 0x0000000000007ec0                _image_size = (_image_end - _image_start)
 OUTPUT(TP4_SO2.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd795
+.debug_info     0x0000000000000000     0xd7dd
  .debug_info    0x0000000000000000      0x8b0 ./startup/startup_mk64f12.o
- .debug_info    0x00000000000008b0      0x882 ./source/TP4_SO2.o
- .debug_info    0x0000000000001132       0x3b ./source/semihost_hardfault.o
- .debug_info    0x000000000000116d     0x19df ./drivers/fsl_uart.o
- .debug_info    0x0000000000002b4c       0xe8 ./board/clock_config.o
- .debug_info    0x0000000000002c34       0x3b ./board/peripherals.o
- .debug_info    0x0000000000002c6f       0x3b ./board/pin_mux.o
- .debug_info    0x0000000000002caa      0x667 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_info    0x0000000000003311      0x96c ./amazon-freertos/portable/heap_4.o
- .debug_info    0x0000000000003c7d      0x94c ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_info    0x00000000000045c9     0x22a7 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_info    0x0000000000006870      0xac2 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_info    0x0000000000007332      0x85d ./amazon-freertos/FreeRTOS/list.o
- .debug_info    0x0000000000007b8f     0x1d17 ./amazon-freertos/FreeRTOS/queue.o
- .debug_info    0x00000000000098a6     0x2597 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_info    0x000000000000be3d     0x1327 ./amazon-freertos/FreeRTOS/timers.o
- .debug_info    0x000000000000d164      0x631 ./CMSIS/system_MK64F12.o
+ .debug_info    0x00000000000008b0      0x8ca ./source/TP4_SO2.o
+ .debug_info    0x000000000000117a       0x3b ./source/semihost_hardfault.o
+ .debug_info    0x00000000000011b5     0x19df ./drivers/fsl_uart.o
+ .debug_info    0x0000000000002b94       0xe8 ./board/clock_config.o
+ .debug_info    0x0000000000002c7c       0x3b ./board/peripherals.o
+ .debug_info    0x0000000000002cb7       0x3b ./board/pin_mux.o
+ .debug_info    0x0000000000002cf2      0x667 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_info    0x0000000000003359      0x96c ./amazon-freertos/portable/heap_4.o
+ .debug_info    0x0000000000003cc5      0x94c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_info    0x0000000000004611     0x22a7 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_info    0x00000000000068b8      0xac2 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_info    0x000000000000737a      0x85d ./amazon-freertos/FreeRTOS/list.o
+ .debug_info    0x0000000000007bd7     0x1d17 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_info    0x00000000000098ee     0x2597 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_info    0x000000000000be85     0x1327 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_info    0x000000000000d1ac      0x631 ./CMSIS/system_MK64F12.o
 
-.debug_abbrev   0x0000000000000000     0x1f41
+.debug_abbrev   0x0000000000000000     0x1f5b
  .debug_abbrev  0x0000000000000000      0x15c ./startup/startup_mk64f12.o
- .debug_abbrev  0x000000000000015c      0x19d ./source/TP4_SO2.o
- .debug_abbrev  0x00000000000002f9       0x2f ./source/semihost_hardfault.o
- .debug_abbrev  0x0000000000000328      0x303 ./drivers/fsl_uart.o
- .debug_abbrev  0x000000000000062b       0x99 ./board/clock_config.o
- .debug_abbrev  0x00000000000006c4       0x2f ./board/peripherals.o
- .debug_abbrev  0x00000000000006f3       0x2f ./board/pin_mux.o
- .debug_abbrev  0x0000000000000722      0x115 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_abbrev  0x0000000000000837      0x262 ./amazon-freertos/portable/heap_4.o
- .debug_abbrev  0x0000000000000a99      0x1ee ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_abbrev  0x0000000000000c87      0x37f ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_abbrev  0x0000000000001006      0x2c8 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_abbrev  0x00000000000012ce      0x195 ./amazon-freertos/FreeRTOS/list.o
- .debug_abbrev  0x0000000000001463      0x356 ./amazon-freertos/FreeRTOS/queue.o
- .debug_abbrev  0x00000000000017b9      0x362 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_abbrev  0x0000000000001b1b      0x2d2 ./amazon-freertos/FreeRTOS/timers.o
- .debug_abbrev  0x0000000000001ded      0x154 ./CMSIS/system_MK64F12.o
+ .debug_abbrev  0x000000000000015c      0x1b7 ./source/TP4_SO2.o
+ .debug_abbrev  0x0000000000000313       0x2f ./source/semihost_hardfault.o
+ .debug_abbrev  0x0000000000000342      0x303 ./drivers/fsl_uart.o
+ .debug_abbrev  0x0000000000000645       0x99 ./board/clock_config.o
+ .debug_abbrev  0x00000000000006de       0x2f ./board/peripherals.o
+ .debug_abbrev  0x000000000000070d       0x2f ./board/pin_mux.o
+ .debug_abbrev  0x000000000000073c      0x115 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_abbrev  0x0000000000000851      0x262 ./amazon-freertos/portable/heap_4.o
+ .debug_abbrev  0x0000000000000ab3      0x1ee ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_abbrev  0x0000000000000ca1      0x37f ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_abbrev  0x0000000000001020      0x2c8 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_abbrev  0x00000000000012e8      0x195 ./amazon-freertos/FreeRTOS/list.o
+ .debug_abbrev  0x000000000000147d      0x356 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_abbrev  0x00000000000017d3      0x362 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_abbrev  0x0000000000001b35      0x2d2 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_abbrev  0x0000000000001e07      0x154 ./CMSIS/system_MK64F12.o
 
-.debug_aranges  0x0000000000000000      0xd68
+.debug_aranges  0x0000000000000000      0xd78
  .debug_aranges
                 0x0000000000000000      0x330 ./startup/startup_mk64f12.o
  .debug_aranges
-                0x0000000000000330       0x38 ./source/TP4_SO2.o
+                0x0000000000000330       0x48 ./source/TP4_SO2.o
  .debug_aranges
-                0x0000000000000368       0x20 ./source/semihost_hardfault.o
+                0x0000000000000378       0x20 ./source/semihost_hardfault.o
  .debug_aranges
-                0x0000000000000388      0x170 ./drivers/fsl_uart.o
+                0x0000000000000398      0x170 ./drivers/fsl_uart.o
  .debug_aranges
-                0x00000000000004f8       0x20 ./board/clock_config.o
+                0x0000000000000508       0x20 ./board/clock_config.o
  .debug_aranges
-                0x0000000000000518       0x20 ./board/peripherals.o
+                0x0000000000000528       0x20 ./board/peripherals.o
  .debug_aranges
-                0x0000000000000538       0x20 ./board/pin_mux.o
+                0x0000000000000548       0x20 ./board/pin_mux.o
  .debug_aranges
-                0x0000000000000558       0x20 ./amazon-freertos/portable/fsl_tickless_systick.o
+                0x0000000000000568       0x20 ./amazon-freertos/portable/fsl_tickless_systick.o
  .debug_aranges
-                0x0000000000000578       0x50 ./amazon-freertos/portable/heap_4.o
+                0x0000000000000588       0x50 ./amazon-freertos/portable/heap_4.o
  .debug_aranges
-                0x00000000000005c8       0xa8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x00000000000005d8       0xa8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
  .debug_aranges
-                0x0000000000000670      0x208 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000680      0x208 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .debug_aranges
-                0x0000000000000878       0x78 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000000888       0x78 ./amazon-freertos/FreeRTOS/portable/port.o
  .debug_aranges
-                0x00000000000008f0       0x40 ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000000900       0x40 ./amazon-freertos/FreeRTOS/list.o
  .debug_aranges
-                0x0000000000000930      0x138 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000000940      0x138 ./amazon-freertos/FreeRTOS/queue.o
  .debug_aranges
-                0x0000000000000a68      0x1f8 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000000a78      0x1f8 ./amazon-freertos/FreeRTOS/tasks.o
  .debug_aranges
-                0x0000000000000c60       0xd8 ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000000c70       0xd8 ./amazon-freertos/FreeRTOS/timers.o
  .debug_aranges
-                0x0000000000000d38       0x30 ./CMSIS/system_MK64F12.o
+                0x0000000000000d48       0x30 ./CMSIS/system_MK64F12.o
 
-.debug_ranges   0x0000000000000000      0xc58
+.debug_ranges   0x0000000000000000      0xc68
  .debug_ranges  0x0000000000000000      0x320 ./startup/startup_mk64f12.o
- .debug_ranges  0x0000000000000320       0x28 ./source/TP4_SO2.o
- .debug_ranges  0x0000000000000348       0x10 ./source/semihost_hardfault.o
- .debug_ranges  0x0000000000000358      0x160 ./drivers/fsl_uart.o
- .debug_ranges  0x00000000000004b8       0x10 ./board/clock_config.o
- .debug_ranges  0x00000000000004c8       0x10 ./board/peripherals.o
- .debug_ranges  0x00000000000004d8       0x10 ./board/pin_mux.o
- .debug_ranges  0x00000000000004e8       0x10 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_ranges  0x00000000000004f8       0x40 ./amazon-freertos/portable/heap_4.o
- .debug_ranges  0x0000000000000538       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_ranges  0x00000000000005d0      0x1f8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_ranges  0x00000000000007c8       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_ranges  0x0000000000000830       0x30 ./amazon-freertos/FreeRTOS/list.o
- .debug_ranges  0x0000000000000860      0x128 ./amazon-freertos/FreeRTOS/queue.o
- .debug_ranges  0x0000000000000988      0x1e8 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_ranges  0x0000000000000b70       0xc8 ./amazon-freertos/FreeRTOS/timers.o
- .debug_ranges  0x0000000000000c38       0x20 ./CMSIS/system_MK64F12.o
+ .debug_ranges  0x0000000000000320       0x38 ./source/TP4_SO2.o
+ .debug_ranges  0x0000000000000358       0x10 ./source/semihost_hardfault.o
+ .debug_ranges  0x0000000000000368      0x160 ./drivers/fsl_uart.o
+ .debug_ranges  0x00000000000004c8       0x10 ./board/clock_config.o
+ .debug_ranges  0x00000000000004d8       0x10 ./board/peripherals.o
+ .debug_ranges  0x00000000000004e8       0x10 ./board/pin_mux.o
+ .debug_ranges  0x00000000000004f8       0x10 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_ranges  0x0000000000000508       0x40 ./amazon-freertos/portable/heap_4.o
+ .debug_ranges  0x0000000000000548       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_ranges  0x00000000000005e0      0x1f8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_ranges  0x00000000000007d8       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_ranges  0x0000000000000840       0x30 ./amazon-freertos/FreeRTOS/list.o
+ .debug_ranges  0x0000000000000870      0x128 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_ranges  0x0000000000000998      0x1e8 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_ranges  0x0000000000000b80       0xc8 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_ranges  0x0000000000000c48       0x20 ./CMSIS/system_MK64F12.o
 
 .debug_macro    0x0000000000000000    0x12df0
  .debug_macro   0x0000000000000000       0x29 ./startup/startup_mk64f12.o
@@ -3539,59 +3542,59 @@ OUTPUT(TP4_SO2.axf elf32-littlearm)
  .debug_macro   0x0000000000012bc1      0x197 ./amazon-freertos/FreeRTOS/timers.o
  .debug_macro   0x0000000000012d58       0x98 ./CMSIS/system_MK64F12.o
 
-.debug_line     0x0000000000000000     0x65ef
+.debug_line     0x0000000000000000     0x6619
  .debug_line    0x0000000000000000      0x6d4 ./startup/startup_mk64f12.o
- .debug_line    0x00000000000006d4      0x3bc ./source/TP4_SO2.o
- .debug_line    0x0000000000000a90       0x54 ./source/semihost_hardfault.o
- .debug_line    0x0000000000000ae4      0x9f6 ./drivers/fsl_uart.o
- .debug_line    0x00000000000014da      0x175 ./board/clock_config.o
- .debug_line    0x000000000000164f       0x58 ./board/peripherals.o
- .debug_line    0x00000000000016a7       0x50 ./board/pin_mux.o
- .debug_line    0x00000000000016f7      0x347 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_line    0x0000000000001a3e      0x46f ./amazon-freertos/portable/heap_4.o
- .debug_line    0x0000000000001ead      0x4a4 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_line    0x0000000000002351      0xecb ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_line    0x000000000000321c      0x53e ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_line    0x000000000000375a      0x38c ./amazon-freertos/FreeRTOS/list.o
- .debug_line    0x0000000000003ae6      0xf88 ./amazon-freertos/FreeRTOS/queue.o
- .debug_line    0x0000000000004a6e     0x127d ./amazon-freertos/FreeRTOS/tasks.o
- .debug_line    0x0000000000005ceb      0x6ff ./amazon-freertos/FreeRTOS/timers.o
- .debug_line    0x00000000000063ea      0x205 ./CMSIS/system_MK64F12.o
+ .debug_line    0x00000000000006d4      0x3e6 ./source/TP4_SO2.o
+ .debug_line    0x0000000000000aba       0x54 ./source/semihost_hardfault.o
+ .debug_line    0x0000000000000b0e      0x9f6 ./drivers/fsl_uart.o
+ .debug_line    0x0000000000001504      0x175 ./board/clock_config.o
+ .debug_line    0x0000000000001679       0x58 ./board/peripherals.o
+ .debug_line    0x00000000000016d1       0x50 ./board/pin_mux.o
+ .debug_line    0x0000000000001721      0x347 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_line    0x0000000000001a68      0x46f ./amazon-freertos/portable/heap_4.o
+ .debug_line    0x0000000000001ed7      0x4a4 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_line    0x000000000000237b      0xecb ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_line    0x0000000000003246      0x53e ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_line    0x0000000000003784      0x38c ./amazon-freertos/FreeRTOS/list.o
+ .debug_line    0x0000000000003b10      0xf88 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_line    0x0000000000004a98     0x127d ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_line    0x0000000000005d15      0x6ff ./amazon-freertos/FreeRTOS/timers.o
+ .debug_line    0x0000000000006414      0x205 ./CMSIS/system_MK64F12.o
 
-.debug_str      0x0000000000000000    0x8e1af
+.debug_str      0x0000000000000000    0x8e1c0
  .debug_str     0x0000000000000000     0x35d1 ./startup/startup_mk64f12.o
                                        0x3654 (size before relaxing)
- .debug_str     0x00000000000035d1    0x7c9fa ./source/TP4_SO2.o
-                                      0x7f8d5 (size before relaxing)
- .debug_str     0x000000000007ffcb       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x00000000000035d1    0x7ca0b ./source/TP4_SO2.o
+                                      0x7f8e6 (size before relaxing)
+ .debug_str     0x000000000007ffdc       0x1f ./source/semihost_hardfault.o
                                        0x2de5 (size before relaxing)
- .debug_str     0x000000000007ffea     0x968e ./drivers/fsl_uart.o
+ .debug_str     0x000000000007fffb     0x968e ./drivers/fsl_uart.o
                                       0x7a88b (size before relaxing)
- .debug_str     0x0000000000089678       0x2d ./board/clock_config.o
+ .debug_str     0x0000000000089689       0x2d ./board/clock_config.o
                                       0x7116a (size before relaxing)
- .debug_str     0x00000000000896a5       0x31 ./board/peripherals.o
+ .debug_str     0x00000000000896b6       0x31 ./board/peripherals.o
                                        0x2df6 (size before relaxing)
- .debug_str     0x00000000000896d6       0x26 ./board/pin_mux.o
+ .debug_str     0x00000000000896e7       0x26 ./board/pin_mux.o
                                        0x2de7 (size before relaxing)
- .debug_str     0x00000000000896fc      0x3dd ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_str     0x000000000008970d      0x3dd ./amazon-freertos/portable/fsl_tickless_systick.o
                                       0x7f105 (size before relaxing)
- .debug_str     0x0000000000089ad9      0x2ad ./amazon-freertos/portable/heap_4.o
+ .debug_str     0x0000000000089aea      0x2ad ./amazon-freertos/portable/heap_4.o
                                       0x7f051 (size before relaxing)
- .debug_str     0x0000000000089d86      0x228 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_str     0x0000000000089d97      0x228 ./amazon-freertos/TraceRecorder/trcKernelPort.o
                                       0x7f687 (size before relaxing)
- .debug_str     0x0000000000089fae     0x1087 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_str     0x0000000000089fbf     0x1087 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
                                       0x7f110 (size before relaxing)
- .debug_str     0x000000000008b035      0x58a ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_str     0x000000000008b046      0x58a ./amazon-freertos/FreeRTOS/portable/port.o
                                       0x7f6ad (size before relaxing)
- .debug_str     0x000000000008b5bf      0x12e ./amazon-freertos/FreeRTOS/list.o
+ .debug_str     0x000000000008b5d0      0x12e ./amazon-freertos/FreeRTOS/list.o
                                       0x7e951 (size before relaxing)
- .debug_str     0x000000000008b6ed      0x829 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_str     0x000000000008b6fe      0x829 ./amazon-freertos/FreeRTOS/queue.o
                                       0x7feea (size before relaxing)
- .debug_str     0x000000000008bf16     0x1bcc ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_str     0x000000000008bf27     0x1bcc ./amazon-freertos/FreeRTOS/tasks.o
                                       0x80cdc (size before relaxing)
- .debug_str     0x000000000008dae2      0x501 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_str     0x000000000008daf3      0x501 ./amazon-freertos/FreeRTOS/timers.o
                                       0x80373 (size before relaxing)
- .debug_str     0x000000000008dfe3      0x1cc ./CMSIS/system_MK64F12.o
+ .debug_str     0x000000000008dff4      0x1cc ./CMSIS/system_MK64F12.o
                                       0x77e2a (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
@@ -3741,21 +3744,21 @@ OUTPUT(TP4_SO2.axf elf32-littlearm)
  .ARM.attributes
                 0x0000000000000a49       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_write.o)
 
-.debug_frame    0x0000000000000000     0x3140
+.debug_frame    0x0000000000000000     0x3178
  .debug_frame   0x0000000000000000      0x904 ./startup/startup_mk64f12.o
- .debug_frame   0x0000000000000904       0x90 ./source/TP4_SO2.o
- .debug_frame   0x0000000000000994       0x20 ./source/semihost_hardfault.o
- .debug_frame   0x00000000000009b4      0x5ec ./drivers/fsl_uart.o
- .debug_frame   0x0000000000000fa0       0x2c ./board/clock_config.o
- .debug_frame   0x0000000000000fcc       0x30 ./board/peripherals.o
- .debug_frame   0x0000000000000ffc       0x30 ./board/pin_mux.o
- .debug_frame   0x000000000000102c       0x30 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_frame   0x000000000000105c      0x108 ./amazon-freertos/portable/heap_4.o
- .debug_frame   0x0000000000001164      0x284 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_frame   0x00000000000013e8      0x8c4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_frame   0x0000000000001cac      0x188 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_frame   0x0000000000001e34       0xd8 ./amazon-freertos/FreeRTOS/list.o
- .debug_frame   0x0000000000001f0c      0x588 ./amazon-freertos/FreeRTOS/queue.o
- .debug_frame   0x0000000000002494      0x8b0 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_frame   0x0000000000002d44      0x388 ./amazon-freertos/FreeRTOS/timers.o
- .debug_frame   0x00000000000030cc       0x74 ./CMSIS/system_MK64F12.o
+ .debug_frame   0x0000000000000904       0xc8 ./source/TP4_SO2.o
+ .debug_frame   0x00000000000009cc       0x20 ./source/semihost_hardfault.o
+ .debug_frame   0x00000000000009ec      0x5ec ./drivers/fsl_uart.o
+ .debug_frame   0x0000000000000fd8       0x2c ./board/clock_config.o
+ .debug_frame   0x0000000000001004       0x30 ./board/peripherals.o
+ .debug_frame   0x0000000000001034       0x30 ./board/pin_mux.o
+ .debug_frame   0x0000000000001064       0x30 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_frame   0x0000000000001094      0x108 ./amazon-freertos/portable/heap_4.o
+ .debug_frame   0x000000000000119c      0x284 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_frame   0x0000000000001420      0x8c4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_frame   0x0000000000001ce4      0x188 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_frame   0x0000000000001e6c       0xd8 ./amazon-freertos/FreeRTOS/list.o
+ .debug_frame   0x0000000000001f44      0x588 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_frame   0x00000000000024cc      0x8b0 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_frame   0x0000000000002d7c      0x388 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_frame   0x0000000000003104       0x74 ./CMSIS/system_MK64F12.o

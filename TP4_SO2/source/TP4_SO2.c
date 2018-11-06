@@ -74,10 +74,21 @@ void vProductor(void *pvParameter){
 			printf("No se pudo escribir en la cola\n");
 		}
 		printf("Guardo en la cola: %s\n", xMessage.ucData);
-		vTaskDelay(4000/portTICK_RATE_MS);
+		vTaskDelay(2000/portTICK_RATE_MS);
     }
 }
 
+void vTeclado (void *pvParameter){
+	for(;;){
+
+	}
+}
+
+void vSensor (void *pvParameter){
+	for(;;){
+
+	}
+}
 void vConsumidor(void *pvParameter){
     QueueHandle_t xQueue;
     xQueue = (QueueHandle_t) pvParameter;
@@ -111,6 +122,8 @@ int main(void) {
     /*No agreamos esta tarea*/
     /*xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);*/
     xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);
+    /*xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);
+    xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);*/
     xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 1, NULL);
 
     vTaskStartScheduler();
