@@ -86,28 +86,27 @@ void vProductor(void *pvParameter){
     }
 }
 
-int aleatorio (int max){
-	return rand()%max;
-}
-
 void vTeclado (void *pvParameter){
 	QueueHandle_t xQueue;
 	xQueue = (QueueHandle_t) pvParameter;
 	AMessage xMessage;
 	TickType_t pxDelay;
-	char letra;
+	int letra;
 	int i;
 	int longitud;
 
 	for(;;){
-		do {
-			letra = aleatorio (123);
-		} while(letra < 97);
+		/*longitud = rand()%20+1;*/
+		/*do {
+			letra = rand()%123;
+		} while(letra < 97);*/
+		/*longitud =rand()%20+1;*/
 		pxDelay = rand()%5000;
 		if(pxDelay < 1000){
 			pxDelay += 1000;
 		}
-		printf("%c\n",letra);
+		pxDelay=2000;
+		//printf("Soy una letra: %c\n",letra);
 		vTaskDelay(pxDelay/portTICK_RATE_MS);
 	}
 }
@@ -119,10 +118,8 @@ void vSensor (void *pvParameter){
 	AMessage xMessage;
 
 	for(;;){
-		do {
-			temperatura = aleatorio (31);
-			itoa(temperatura,xMessage.ucData, 10);
-		}while(temperatura < 10);
+		temperatura=rand()%45+10;
+		itoa(temperatura,xMessage.ucData,10);
 		printf("Lectura del sensor: %d\n", temperatura);
 		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS ){
 			printf("No se pudo escribir en la cola\n");
