@@ -86,14 +86,29 @@ void vProductor(void *pvParameter){
     }
 }
 
-void vTeclado (void *pvParameter){
-	for(;;){
-
-	}
-}
-
 int aleatorio (int max){
 	return rand()%max;
+}
+
+void vTeclado (void *pvParameter){
+	QueueHandle_t xQueue;
+	xQueue = (QueueHandle_t) pvParameter;
+	AMessage xMessage;
+	TickType_t pxDelay;
+	char tipeo;
+	int i;
+
+	for(;;){
+		do {
+			tipeo = aleatorio (123);
+		} while(tipeo < 97);
+		pxDelay = rand()%1001;
+		if(pxDelay < 100){
+			pxDelay += 100;
+		}
+		printf("%c\n",tipeo);
+		vTaskDelay(pxDelay/portTICK_RATE_MS);
+	}
 }
 
 void vSensor (void *pvParameter){
@@ -147,7 +162,7 @@ int main(void) {
     /*No agreamos esta tarea*/
     /*xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);*/
     /*xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);*/
-    /*xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);*/
+    xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);
     xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);
     xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 2, NULL);
 

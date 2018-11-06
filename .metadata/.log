@@ -12004,3 +12004,21 @@ Caused by: java.io.IOException: Document is closed
 
 !ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 12:13:31.342
 !MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 12:25:56.516
+!MESSAGE ContextManager.reportStatus(): Context for Session 33 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 12:25:58.367
+!MESSAGE Telnet session connected on port 2333->51150 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 12:26:18.029
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
+
+!ENTRY com.percepio.tracealyzer.ui 1 0 2018-11-06 12:29:14.305
+!MESSAGE ContextManager.reportStatus(): Context for Session 34 (org.eclipse.cdt.dsf.gdb)
+
+!ENTRY com.crt.dsfdebug 1 0 2018-11-06 12:29:16.123
+!MESSAGE Telnet session connected on port 2333->51168 @ 127.0.0.1
+
+!ENTRY com.percepio.tracealyzer.ui 2 0 2018-11-06 12:29:24.843
+!MESSAGE ContextManager.reportWarning(): Session for current Context ended
