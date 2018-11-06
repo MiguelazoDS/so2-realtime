@@ -33,7 +33,7 @@ Archive member included to satisfy reference by file (symbol)
 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(setvbuf.o)
                               /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o) (setvbuf)
 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
-                              ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/SEGGER_RTT.o (strcpy)
+                              ./source/TP4_SO2.o (strcpy)
 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
                               ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/SEGGER_RTT.o (strlen)
 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strncmp.o)
@@ -115,6 +115,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./source/TP4_SO2.o
  .data          0x0000000000000000        0x0 ./source/TP4_SO2.o
  .bss           0x0000000000000000        0x0 ./source/TP4_SO2.o
+ .text.vPrint   0x0000000000000000       0x1c ./source/TP4_SO2.o
  .debug_macro   0x0000000000000000      0xa9c ./source/TP4_SO2.o
  .group         0x0000000000000000        0xc ./source/semihost_hardfault.o
  .text          0x0000000000000000        0x0 ./source/semihost_hardfault.o
@@ -176,8 +177,8 @@ Discarded input sections
                 0x0000000000000000       0xaa ./drivers/freertos/fsl_uart_freertos.o
  .text.UART_RTOS_Receive
                 0x0000000000000000      0x13a ./drivers/freertos/fsl_uart_freertos.o
- .debug_info    0x0000000000000000      0xf66 ./drivers/freertos/fsl_uart_freertos.o
- .debug_abbrev  0x0000000000000000      0x25b ./drivers/freertos/fsl_uart_freertos.o
+ .debug_info    0x0000000000000000      0xf84 ./drivers/freertos/fsl_uart_freertos.o
+ .debug_abbrev  0x0000000000000000      0x280 ./drivers/freertos/fsl_uart_freertos.o
  .debug_aranges
                 0x0000000000000000       0x50 ./drivers/freertos/fsl_uart_freertos.o
  .debug_ranges  0x0000000000000000       0x40 ./drivers/freertos/fsl_uart_freertos.o
@@ -221,7 +222,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x7e ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x0000000000000000       0x1c ./drivers/freertos/fsl_uart_freertos.o
  .debug_line    0x0000000000000000      0x4ff ./drivers/freertos/fsl_uart_freertos.o
- .debug_str     0x0000000000000000    0x88e14 ./drivers/freertos/fsl_uart_freertos.o
+ .debug_str     0x0000000000000000    0x88e15 ./drivers/freertos/fsl_uart_freertos.o
  .comment       0x0000000000000000       0x7f ./drivers/freertos/fsl_uart_freertos.o
  .debug_frame   0x0000000000000000      0x11c ./drivers/freertos/fsl_uart_freertos.o
  .ARM.attributes
@@ -873,8 +874,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .data          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .bss           0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
- .debug_info    0x0000000000000000      0x625 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
- .debug_abbrev  0x0000000000000000       0xd4 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
+ .debug_info    0x0000000000000000      0x643 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
+ .debug_abbrev  0x0000000000000000       0xf9 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .debug_aranges
                 0x0000000000000000       0x18 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x137 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
@@ -903,7 +904,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x98d ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x1f0 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .debug_line    0x0000000000000000      0x319 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
- .debug_str     0x0000000000000000    0x7e600 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
+ .debug_str     0x0000000000000000    0x7e601 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
  .ARM.attributes
                 0x0000000000000000       0x39 ./amazon-freertos/TraceRecorder/streamports/Jlink_RTT/trcStreamingPort.o
@@ -934,8 +935,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .data          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .bss           0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
- .debug_info    0x0000000000000000      0x625 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
- .debug_abbrev  0x0000000000000000       0xd4 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
+ .debug_info    0x0000000000000000      0x643 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
+ .debug_abbrev  0x0000000000000000       0xf9 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .debug_aranges
                 0x0000000000000000       0x18 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x137 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
@@ -964,7 +965,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x98d ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x1f0 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .debug_line    0x0000000000000000      0x314 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
- .debug_str     0x0000000000000000    0x7e5fb ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
+ .debug_str     0x0000000000000000    0x7e5fc ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
  .ARM.attributes
                 0x0000000000000000       0x39 ./amazon-freertos/TraceRecorder/streamports/File/trcStreamingPort.o
@@ -995,8 +996,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .data          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .bss           0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
- .debug_info    0x0000000000000000      0x625 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
- .debug_abbrev  0x0000000000000000       0xd4 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
+ .debug_info    0x0000000000000000      0x643 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
+ .debug_abbrev  0x0000000000000000       0xf9 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .debug_aranges
                 0x0000000000000000       0x18 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x137 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
@@ -1025,7 +1026,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x98d ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .debug_macro   0x0000000000000000      0x1f0 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .debug_line    0x0000000000000000      0x317 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
- .debug_str     0x0000000000000000    0x7e5fe ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
+ .debug_str     0x0000000000000000    0x7e5ff ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
  .ARM.attributes
                 0x0000000000000000       0x39 ./amazon-freertos/TraceRecorder/streamports/ARM_ITM/trcStreamingPort.o
@@ -1140,7 +1141,7 @@ Discarded input sections
  .text.xTraceGetTraceBuffer
                 0x0000000000000000       0x18 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.uiTraceGetTraceBufferSize
-                0x0000000000000000       0x12 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000000       0x14 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceTaskInstanceFinish
                 0x0000000000000000       0x98 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.vTraceInstanceFinishedNext
@@ -1246,8 +1247,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .data          0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .bss           0x0000000000000000        0x0 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
- .debug_info    0x0000000000000000      0x625 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
- .debug_abbrev  0x0000000000000000       0xd4 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
+ .debug_info    0x0000000000000000      0x643 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
+ .debug_abbrev  0x0000000000000000       0xf9 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .debug_aranges
                 0x0000000000000000       0x18 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .debug_macro   0x0000000000000000      0x137 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
@@ -1276,7 +1277,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x98d ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .debug_macro   0x0000000000000000      0x1f0 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .debug_line    0x0000000000000000      0x307 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
- .debug_str     0x0000000000000000    0x7e5ee ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
+ .debug_str     0x0000000000000000    0x7e5ef ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
  .ARM.attributes
                 0x0000000000000000       0x39 ./amazon-freertos/TraceRecorder/trcStreamingRecorder.o
@@ -1399,8 +1400,8 @@ Discarded input sections
                 0x0000000000000000       0x2c ./amazon-freertos/FreeRTOS/event_groups.o
  .text.vEventGroupSetNumber
                 0x0000000000000000       0x1c ./amazon-freertos/FreeRTOS/event_groups.o
- .debug_info    0x0000000000000000      0xf3c ./amazon-freertos/FreeRTOS/event_groups.o
- .debug_abbrev  0x0000000000000000      0x295 ./amazon-freertos/FreeRTOS/event_groups.o
+ .debug_info    0x0000000000000000      0xf5a ./amazon-freertos/FreeRTOS/event_groups.o
+ .debug_abbrev  0x0000000000000000      0x2ba ./amazon-freertos/FreeRTOS/event_groups.o
  .debug_aranges
                 0x0000000000000000       0x88 ./amazon-freertos/FreeRTOS/event_groups.o
  .debug_ranges  0x0000000000000000       0x78 ./amazon-freertos/FreeRTOS/event_groups.o
@@ -1433,7 +1434,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x8c ./amazon-freertos/FreeRTOS/event_groups.o
  .debug_macro   0x0000000000000000       0x91 ./amazon-freertos/FreeRTOS/event_groups.o
  .debug_line    0x0000000000000000      0x5fc ./amazon-freertos/FreeRTOS/event_groups.o
- .debug_str     0x0000000000000000    0x7fb0a ./amazon-freertos/FreeRTOS/event_groups.o
+ .debug_str     0x0000000000000000    0x7fb0b ./amazon-freertos/FreeRTOS/event_groups.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/FreeRTOS/event_groups.o
  .debug_frame   0x0000000000000000      0x218 ./amazon-freertos/FreeRTOS/event_groups.o
  .ARM.attributes
@@ -1664,8 +1665,8 @@ Discarded input sections
                 0x0000000000000000       0x1c ./amazon-freertos/FreeRTOS/stream_buffer.o
  .text.ucStreamBufferGetStreamBufferType
                 0x0000000000000000       0x1e ./amazon-freertos/FreeRTOS/stream_buffer.o
- .debug_info    0x0000000000000000     0x163d ./amazon-freertos/FreeRTOS/stream_buffer.o
- .debug_abbrev  0x0000000000000000      0x2e6 ./amazon-freertos/FreeRTOS/stream_buffer.o
+ .debug_info    0x0000000000000000     0x165b ./amazon-freertos/FreeRTOS/stream_buffer.o
+ .debug_abbrev  0x0000000000000000      0x30b ./amazon-freertos/FreeRTOS/stream_buffer.o
  .debug_aranges
                 0x0000000000000000       0xd0 ./amazon-freertos/FreeRTOS/stream_buffer.o
  .debug_ranges  0x0000000000000000       0xc0 ./amazon-freertos/FreeRTOS/stream_buffer.o
@@ -1698,7 +1699,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x8c ./amazon-freertos/FreeRTOS/stream_buffer.o
  .debug_macro   0x0000000000000000       0x18 ./amazon-freertos/FreeRTOS/stream_buffer.o
  .debug_line    0x0000000000000000      0x869 ./amazon-freertos/FreeRTOS/stream_buffer.o
- .debug_str     0x0000000000000000    0x7fb9b ./amazon-freertos/FreeRTOS/stream_buffer.o
+ .debug_str     0x0000000000000000    0x7fb9c ./amazon-freertos/FreeRTOS/stream_buffer.o
  .comment       0x0000000000000000       0x7f ./amazon-freertos/FreeRTOS/stream_buffer.o
  .debug_frame   0x0000000000000000      0x378 ./amazon-freertos/FreeRTOS/stream_buffer.o
  .ARM.attributes
@@ -2021,10 +2022,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
- .text.strcpy   0x0000000000000000       0x42 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
- .comment       0x0000000000000000       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
- .ARM.attributes
-                0x0000000000000000       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
@@ -2220,7 +2217,7 @@ END GROUP
                 0x0000000014001000                __top_FLEX_RAM = 0x14001000
                 0x0000000014001000                __top_RAM3 = 0x14001000
 
-.text           0x0000000000000000     0x7d28
+.text           0x0000000000000000     0x7ea8
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -2230,19 +2227,19 @@ END GROUP
                 0x0000000000000198                . = ALIGN (0x4)
                 0x0000000000000198                __section_table_start = .
                 0x0000000000000198                __data_section_table = .
-                0x0000000000000198        0x4 LONG 0x7d28 LOADADDR (.data)
+                0x0000000000000198        0x4 LONG 0x7ea8 LOADADDR (.data)
                 0x000000000000019c        0x4 LONG 0x20000000 ADDR (.data)
                 0x00000000000001a0        0x4 LONG 0x18 SIZEOF (.data)
-                0x00000000000001a4        0x4 LONG 0x7d28 LOADADDR (.data_RAM2)
+                0x00000000000001a4        0x4 LONG 0x7ea8 LOADADDR (.data_RAM2)
                 0x00000000000001a8        0x4 LONG 0x1fff0000 ADDR (.data_RAM2)
                 0x00000000000001ac        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x00000000000001b0        0x4 LONG 0x7d28 LOADADDR (.data_RAM3)
+                0x00000000000001b0        0x4 LONG 0x7ea8 LOADADDR (.data_RAM3)
                 0x00000000000001b4        0x4 LONG 0x14000000 ADDR (.data_RAM3)
                 0x00000000000001b8        0x4 LONG 0x0 SIZEOF (.data_RAM3)
                 0x00000000000001bc                __data_section_table_end = .
                 0x00000000000001bc                __bss_section_table = .
                 0x00000000000001bc        0x4 LONG 0x20000018 ADDR (.bss)
-                0x00000000000001c0        0x4 LONG 0x4468 SIZEOF (.bss)
+                0x00000000000001c0        0x4 LONG 0x1bb68 SIZEOF (.bss)
                 0x00000000000001c4        0x4 LONG 0x1fff0000 ADDR (.bss_RAM2)
                 0x00000000000001c8        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x00000000000001cc        0x4 LONG 0x14000000 ADDR (.bss_RAM3)
@@ -2358,785 +2355,792 @@ END GROUP
  .text.PendSV_Handler
                 0x0000000000000440       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
                 0x0000000000000440                PendSV_Handler
- .text.vPrint   0x00000000000004a8       0x1c ./source/TP4_SO2.o
-                0x00000000000004a8                vPrint
- .text.main     0x00000000000004c4       0x48 ./source/TP4_SO2.o
-                0x00000000000004c4                main
+ .text.vProductor
+                0x00000000000004a8       0x5c ./source/TP4_SO2.o
+                0x00000000000004a8                vProductor
+ .text.vConsumidor
+                0x0000000000000504       0x40 ./source/TP4_SO2.o
+                0x0000000000000504                vConsumidor
+ .text.main     0x0000000000000544       0x70 ./source/TP4_SO2.o
+                0x0000000000000544                main
  .text.UART0_DriverIRQHandler
-                0x000000000000050c       0x28 ./drivers/fsl_uart.o
-                0x000000000000050c                UART0_DriverIRQHandler
+                0x00000000000005b4       0x28 ./drivers/fsl_uart.o
+                0x00000000000005b4                UART0_DriverIRQHandler
  .text.UART1_DriverIRQHandler
-                0x0000000000000534       0x28 ./drivers/fsl_uart.o
-                0x0000000000000534                UART1_DriverIRQHandler
+                0x00000000000005dc       0x28 ./drivers/fsl_uart.o
+                0x00000000000005dc                UART1_DriverIRQHandler
  .text.UART2_DriverIRQHandler
-                0x000000000000055c       0x28 ./drivers/fsl_uart.o
-                0x000000000000055c                UART2_DriverIRQHandler
+                0x0000000000000604       0x28 ./drivers/fsl_uart.o
+                0x0000000000000604                UART2_DriverIRQHandler
  .text.UART3_DriverIRQHandler
-                0x0000000000000584       0x28 ./drivers/fsl_uart.o
-                0x0000000000000584                UART3_DriverIRQHandler
+                0x000000000000062c       0x28 ./drivers/fsl_uart.o
+                0x000000000000062c                UART3_DriverIRQHandler
  .text.UART4_DriverIRQHandler
-                0x00000000000005ac       0x28 ./drivers/fsl_uart.o
-                0x00000000000005ac                UART4_DriverIRQHandler
+                0x0000000000000654       0x28 ./drivers/fsl_uart.o
+                0x0000000000000654                UART4_DriverIRQHandler
  .text.UART5_DriverIRQHandler
-                0x00000000000005d4       0x28 ./drivers/fsl_uart.o
-                0x00000000000005d4                UART5_DriverIRQHandler
+                0x000000000000067c       0x28 ./drivers/fsl_uart.o
+                0x000000000000067c                UART5_DriverIRQHandler
  .text.vPortSetupTimerInterrupt
-                0x00000000000005fc       0x48 ./amazon-freertos/portable/fsl_tickless_systick.o
-                0x00000000000005fc                vPortSetupTimerInterrupt
+                0x00000000000006a4       0x48 ./amazon-freertos/portable/fsl_tickless_systick.o
+                0x00000000000006a4                vPortSetupTimerInterrupt
  .text.pvPortMalloc
-                0x0000000000000644      0x1a4 ./amazon-freertos/portable/heap_4.o
-                0x0000000000000644                pvPortMalloc
+                0x00000000000006ec      0x1a4 ./amazon-freertos/portable/heap_4.o
+                0x00000000000006ec                pvPortMalloc
  .text.vPortFree
-                0x00000000000007e8       0xc0 ./amazon-freertos/portable/heap_4.o
-                0x00000000000007e8                vPortFree
+                0x0000000000000890       0xc0 ./amazon-freertos/portable/heap_4.o
+                0x0000000000000890                vPortFree
  .text.prvHeapInit
-                0x00000000000008a8       0xc4 ./amazon-freertos/portable/heap_4.o
+                0x0000000000000950       0xc4 ./amazon-freertos/portable/heap_4.o
  .text.prvInsertBlockIntoFreeList
-                0x000000000000096c       0xb4 ./amazon-freertos/portable/heap_4.o
+                0x0000000000000a14       0xb4 ./amazon-freertos/portable/heap_4.o
  .text.vTraceInitObjectPropertyTable
-                0x0000000000000a20      0x19c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000000a20                vTraceInitObjectPropertyTable
+                0x0000000000000ac8      0x19c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000000ac8                vTraceInitObjectPropertyTable
  .text.vTraceInitObjectHandleStack
-                0x0000000000000bbc       0xc8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000000bbc                vTraceInitObjectHandleStack
+                0x0000000000000c64       0xc8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000000c64                vTraceInitObjectHandleStack
  .text.pszTraceGetErrorNotEnoughHandles
-                0x0000000000000c84       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000000c84                pszTraceGetErrorNotEnoughHandles
+                0x0000000000000d2c       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000000d2c                pszTraceGetErrorNotEnoughHandles
  .text.vTraceEnable
-                0x0000000000000d1c       0x44 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000000d1c                vTraceEnable
+                0x0000000000000dc4       0x44 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000dc4                vTraceEnable
  .text.uiTraceStart
-                0x0000000000000d60       0xdc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000000d60                uiTraceStart
+                0x0000000000000e08       0xdc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000e08                uiTraceStart
  .text.vTraceStop
-                0x0000000000000e3c       0x30 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000000e3c                vTraceStop
+                0x0000000000000ee4       0x30 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000ee4                vTraceStop
  .text.prvTraceStoreTaskReady
-                0x0000000000000e6c       0xc8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000000e6c                prvTraceStoreTaskReady
+                0x0000000000000f14       0xc8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000f14                prvTraceStoreTaskReady
  .text.vTraceStoreMemMangEvent
-                0x0000000000000f34      0x118 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000000f34                vTraceStoreMemMangEvent
+                0x0000000000000fdc      0x118 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000fdc                vTraceStoreMemMangEvent
  .text.prvTraceStoreKernelCall
-                0x000000000000104c       0xf8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x000000000000104c                prvTraceStoreKernelCall
+                0x00000000000010f4       0xf8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x00000000000010f4                prvTraceStoreKernelCall
  .text.prvTraceStoreKernelCallWithParam
-                0x0000000000001144      0x110 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001144                prvTraceStoreKernelCallWithParam
+                0x00000000000011ec      0x110 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x00000000000011ec                prvTraceStoreKernelCallWithParam
  .text.prvTraceGetParam
-                0x0000000000001254       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x00000000000012fc       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceStoreKernelCallWithNumericParamOnly
-                0x00000000000012cc       0xc8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x00000000000012cc                prvTraceStoreKernelCallWithNumericParamOnly
+                0x0000000000001374       0xc8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001374                prvTraceStoreKernelCallWithNumericParamOnly
  .text.prvTraceStoreTaskswitch
-                0x0000000000001394       0xe0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001394                prvTraceStoreTaskswitch
+                0x000000000000143c       0xe0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000000000143c                prvTraceStoreTaskswitch
  .text.prvTraceSetPriorityProperty
-                0x0000000000001474       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001474                prvTraceSetPriorityProperty
+                0x000000000000151c       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000000000151c                prvTraceSetPriorityProperty
  .text.prvTraceGetPriorityProperty
-                0x00000000000014ec       0x7c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x00000000000014ec                prvTraceGetPriorityProperty
+                0x0000000000001594       0x7c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001594                prvTraceGetPriorityProperty
  .text.prvTraceSetObjectState
-                0x0000000000001568       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001568                prvTraceSetObjectState
+                0x0000000000001610       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001610                prvTraceSetObjectState
  .text.prvTraceGetObjectState
-                0x00000000000015e0       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001688       0x78 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceSetTaskInstanceFinished
-                0x0000000000001658       0x54 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001658                prvTraceSetTaskInstanceFinished
+                0x0000000000001700       0x54 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001700                prvTraceSetTaskInstanceFinished
  .text.prvTraceInitTraceData
-                0x00000000000016ac      0x22c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001754      0x22c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceNextFreeEventBufferSlot
-                0x00000000000018d8       0x48 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001980       0x48 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.uiIndexOfObject
-                0x0000000000001920       0xb0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001920                uiIndexOfObject
+                0x00000000000019c8       0xb0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x00000000000019c8                uiIndexOfObject
  .text.prvTraceGetObjectHandle
-                0x00000000000019d0      0x158 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x00000000000019d0                prvTraceGetObjectHandle
+                0x0000000000001a78      0x158 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001a78                prvTraceGetObjectHandle
  .text.prvMarkObjectAsUsed
-                0x0000000000001b28       0x3c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001b28                prvMarkObjectAsUsed
+                0x0000000000001bd0       0x3c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001bd0                prvMarkObjectAsUsed
  .text.prvTraceSetObjectName
-                0x0000000000001b64       0xbc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001b64                prvTraceSetObjectName
+                0x0000000000001c0c       0xbc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001c0c                prvTraceSetObjectName
  .text.prvTraceError
-                0x0000000000001c20       0x58 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001c20                prvTraceError
+                0x0000000000001cc8       0x58 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001cc8                prvTraceError
  .text.prvCheckDataToBeOverwrittenForMultiEntryEvents
-                0x0000000000001c78      0x114 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001d20      0x114 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceUpdateCounters
-                0x0000000000001d8c       0x50 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001e34       0x50 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceGetDTS
-                0x0000000000001ddc      0x1b0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000001e84      0x1b0 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.prvTraceInitCortexM
-                0x0000000000001f8c       0x6c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001f8c                prvTraceInitCortexM
+                0x0000000000002034       0x6c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000002034                prvTraceInitCortexM
  .text.prvTracePortGetTimeStamp
-                0x0000000000001ff8       0x94 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000001ff8                prvTracePortGetTimeStamp
+                0x00000000000020a0       0x94 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x00000000000020a0                prvTracePortGetTimeStamp
  .text.pxPortInitialiseStack
-                0x000000000000208c       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
-                0x000000000000208c                pxPortInitialiseStack
+                0x0000000000002134       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002134                pxPortInitialiseStack
  .text.prvTaskExitError
-                0x00000000000020f4       0x54 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x000000000000219c       0x54 ./amazon-freertos/FreeRTOS/portable/port.o
  .text.prvPortStartFirstTask
-                0x0000000000002148       0x28 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x00000000000021f0       0x28 ./amazon-freertos/FreeRTOS/portable/port.o
  .text.xPortStartScheduler
-                0x0000000000002170      0x15c ./amazon-freertos/FreeRTOS/portable/port.o
-                0x0000000000002170                xPortStartScheduler
+                0x0000000000002218      0x15c ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002218                xPortStartScheduler
  .text.vPortEnterCritical
-                0x00000000000022cc       0x5c ./amazon-freertos/FreeRTOS/portable/port.o
-                0x00000000000022cc                vPortEnterCritical
+                0x0000000000002374       0x5c ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002374                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000000000002328       0x50 ./amazon-freertos/FreeRTOS/portable/port.o
-                0x0000000000002328                vPortExitCritical
+                0x00000000000023d0       0x50 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x00000000000023d0                vPortExitCritical
  .text.SysTick_Handler
-                0x0000000000002378       0x40 ./amazon-freertos/FreeRTOS/portable/port.o
-                0x0000000000002378                SysTick_Handler
+                0x0000000000002420       0x40 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002420                SysTick_Handler
  .text.vPortEnableVFP
-                0x00000000000023b8       0x14 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002460       0x14 ./amazon-freertos/FreeRTOS/portable/port.o
  .text.vPortValidateInterruptPriority
-                0x00000000000023cc       0x7c ./amazon-freertos/FreeRTOS/portable/port.o
-                0x00000000000023cc                vPortValidateInterruptPriority
+                0x0000000000002474       0x7c ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000002474                vPortValidateInterruptPriority
  .text.xQueueGenericReset
-                0x0000000000002448       0xd0 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000002448                xQueueGenericReset
+                0x00000000000024f0       0xd0 ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000024f0                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x0000000000002518       0xac ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000002518                xQueueGenericCreate
+                0x00000000000025c0       0xac ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000025c0                xQueueGenericCreate
  .text.prvInitialiseNewQueue
-                0x00000000000025c4      0x128 ./amazon-freertos/FreeRTOS/queue.o
+                0x000000000000266c      0x128 ./amazon-freertos/FreeRTOS/queue.o
  .text.xQueueGenericSend
-                0x00000000000026ec      0x414 ./amazon-freertos/FreeRTOS/queue.o
-                0x00000000000026ec                xQueueGenericSend
+                0x0000000000002794      0x414 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000002794                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x0000000000002b00      0x208 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000002b00                xQueueGenericSendFromISR
+                0x0000000000002ba8      0x208 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000002ba8                xQueueGenericSendFromISR
  .text.xQueueReceive
-                0x0000000000002d08      0x404 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000002d08                xQueueReceive
+                0x0000000000002db0      0x404 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000002db0                xQueueReceive
  .text.vQueueAddToRegistry
-                0x000000000000310c       0x74 ./amazon-freertos/FreeRTOS/queue.o
-                0x000000000000310c                vQueueAddToRegistry
+                0x00000000000031b4       0x74 ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000031b4                vQueueAddToRegistry
  .text.prvAddNewTaskToReadyList
-                0x0000000000003180      0x1a4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003228      0x1a4 ./amazon-freertos/FreeRTOS/tasks.o
  .text.vTaskDelay
-                0x0000000000003324       0xd8 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003324                vTaskDelay
+                0x00000000000033cc       0xd8 ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000033cc                vTaskDelay
  .text.vTaskStartScheduler
-                0x00000000000033fc       0x98 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000033fc                vTaskStartScheduler
+                0x00000000000034a4       0x98 ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000034a4                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x0000000000003494       0x1c ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003494                vTaskSuspendAll
+                0x000000000000353c       0x1c ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000000000353c                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x00000000000034b0      0x160 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000034b0                xTaskResumeAll
+                0x0000000000003558      0x160 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003558                xTaskResumeAll
  .text.xTaskGetTickCount
-                0x0000000000003610       0x20 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003610                xTaskGetTickCount
+                0x00000000000036b8       0x20 ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000036b8                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x0000000000003630      0x1c0 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003630                xTaskIncrementTick
+                0x00000000000036d8      0x1c0 ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000036d8                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x00000000000037f0       0xe8 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000037f0                vTaskSwitchContext
+                0x0000000000003898       0xe8 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003898                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x00000000000038d8       0x48 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000038d8                vTaskPlaceOnEventList
+                0x0000000000003980       0x48 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003980                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x0000000000003920       0xcc ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003920                vTaskPlaceOnEventListRestricted
+                0x00000000000039c8       0xcc ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000039c8                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x00000000000039ec       0xec ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000039ec                xTaskRemoveFromEventList
+                0x0000000000003a94       0xec ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003a94                xTaskRemoveFromEventList
  .text.vTaskInternalSetTimeOutState
-                0x0000000000003ad8       0x2c ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003ad8                vTaskInternalSetTimeOutState
+                0x0000000000003b80       0x2c ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003b80                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000000000003b04       0xc0 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003b04                xTaskCheckForTimeOut
+                0x0000000000003bac       0xc0 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003bac                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x0000000000003bc4       0x18 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003bc4                vTaskMissedYield
+                0x0000000000003c6c       0x18 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003c6c                vTaskMissedYield
  .text.prvIdleTask
-                0x0000000000003bdc       0x30 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003c84       0x30 ./amazon-freertos/FreeRTOS/tasks.o
  .text.prvInitialiseTaskLists
-                0x0000000000003c0c       0x80 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003cb4       0x80 ./amazon-freertos/FreeRTOS/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x0000000000003c8c       0x58 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003d34       0x58 ./amazon-freertos/FreeRTOS/tasks.o
  .text.prvResetNextTaskUnblockTime
-                0x0000000000003ce4       0x4c ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003d8c       0x4c ./amazon-freertos/FreeRTOS/tasks.o
  .text.xTaskGetCurrentTaskHandle
-                0x0000000000003d30       0x20 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003d30                xTaskGetCurrentTaskHandle
+                0x0000000000003dd8       0x20 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003dd8                xTaskGetCurrentTaskHandle
  .text.xTaskGetSchedulerState
-                0x0000000000003d50       0x3c ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003d50                xTaskGetSchedulerState
+                0x0000000000003df8       0x3c ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003df8                xTaskGetSchedulerState
  .text.xTaskPriorityDisinherit
-                0x0000000000003d8c      0x18c ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000003d8c                xTaskPriorityDisinherit
+                0x0000000000003e34      0x18c ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003e34                xTaskPriorityDisinherit
  .text.prvAddCurrentTaskToDelayedList
-                0x0000000000003f18       0xcc ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000003fc0       0xcc ./amazon-freertos/FreeRTOS/tasks.o
  .text.xTimerCreateTimerTask
-                0x0000000000003fe4       0x60 ./amazon-freertos/FreeRTOS/timers.o
-                0x0000000000003fe4                xTimerCreateTimerTask
+                0x000000000000408c       0x60 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000000000408c                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x0000000000004044       0x98 ./amazon-freertos/FreeRTOS/timers.o
-                0x0000000000004044                xTimerGenericCommand
+                0x00000000000040ec       0x98 ./amazon-freertos/FreeRTOS/timers.o
+                0x00000000000040ec                xTimerGenericCommand
  .text.prvProcessExpiredTimer
-                0x00000000000040dc       0x80 ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000004184       0x80 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvProcessTimerOrBlockTask
-                0x000000000000415c       0x9c ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000004204       0x9c ./amazon-freertos/FreeRTOS/timers.o
  .text.prvGetNextExpireTime
-                0x00000000000041f8       0x48 ./amazon-freertos/FreeRTOS/timers.o
+                0x00000000000042a0       0x48 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvSampleTimeNow
-                0x0000000000004240       0x40 ./amazon-freertos/FreeRTOS/timers.o
+                0x00000000000042e8       0x40 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvInsertTimerInActiveList
-                0x0000000000004280       0x84 ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000004328       0x84 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvProcessReceivedCommands
-                0x0000000000004304      0x154 ./amazon-freertos/FreeRTOS/timers.o
+                0x00000000000043ac      0x154 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvSwitchTimerLists
-                0x0000000000004458       0xc0 ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000004500       0xc0 ./amazon-freertos/FreeRTOS/timers.o
  .text.prvCheckForValidListAndQueue
-                0x0000000000004518       0x6c ./amazon-freertos/FreeRTOS/timers.o
+                0x00000000000045c0       0x6c ./amazon-freertos/FreeRTOS/timers.o
  .text.SystemInit
-                0x0000000000004584       0x3c ./CMSIS/system_MK64F12.o
-                0x0000000000004584                SystemInit
+                0x000000000000462c       0x3c ./CMSIS/system_MK64F12.o
+                0x000000000000462c                SystemInit
  .text.SystemCoreClockUpdate
-                0x00000000000045c0      0x278 ./CMSIS/system_MK64F12.o
-                0x00000000000045c0                SystemCoreClockUpdate
+                0x0000000000004668      0x278 ./CMSIS/system_MK64F12.o
+                0x0000000000004668                SystemCoreClockUpdate
  .text.__sys_appexit
-                0x0000000000004838        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_appexit.o)
-                0x0000000000004838                __exit
-                0x0000000000004838                __sys_appexit
+                0x00000000000048e0        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_appexit.o)
+                0x00000000000048e0                __exit
+                0x00000000000048e0                __sys_appexit
  .text._Cwritebuf
-                0x0000000000004844       0x6c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_writebuf.o)
-                0x0000000000004844                _Cwritebuf
- .text.malloc   0x00000000000048b0       0xc8 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
-                0x00000000000048b0                malloc
+                0x00000000000048ec       0x6c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_writebuf.o)
+                0x00000000000048ec                _Cwritebuf
+ .text.malloc   0x0000000000004958       0xc8 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
+                0x0000000000004958                malloc
  .text._Csys_alloc
-                0x0000000000004978       0x20 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
-                0x0000000000004978                _Csys_alloc
- .text.fseek    0x0000000000004998      0x100 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fseek.o)
-                0x0000000000004998                fseek
- .text.ftell    0x0000000000004a98       0x44 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(ftell.o)
-                0x0000000000004a98                ftell
- .text._initio  0x0000000000004adc       0x78 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o)
-                0x0000000000004adc                _initio
+                0x0000000000004a20       0x20 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
+                0x0000000000004a20                _Csys_alloc
+ .text.fseek    0x0000000000004a40      0x100 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fseek.o)
+                0x0000000000004a40                fseek
+ .text.ftell    0x0000000000004b40       0x44 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(ftell.o)
+                0x0000000000004b40                ftell
+ .text._initio  0x0000000000004b84       0x78 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o)
+                0x0000000000004b84                _initio
  .text.__vfprintf
-                0x0000000000004b54      0xb98 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
-                0x0000000000004b54                __vfprintf
+                0x0000000000004bfc      0xb98 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
+                0x0000000000004bfc                __vfprintf
  .text._vsnprintf
-                0x00000000000056ec       0x5c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
-                0x00000000000056ec                _vsnprintf
- .text._printf  0x0000000000005748       0x54 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
-                0x0000000000005748                _printf
- .text.setvbuf  0x000000000000579c       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(setvbuf.o)
-                0x000000000000579c                setvbuf
- .text._sbrk    0x00000000000057dc       0x3c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_sbrk.o)
-                0x00000000000057dc                _sbrk
- .text.fflush   0x0000000000005818       0x44 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fflush.o)
-                0x0000000000005818                fflush
+                0x0000000000005794       0x5c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
+                0x0000000000005794                _vsnprintf
+ .text._printf  0x00000000000057f0       0x54 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
+                0x00000000000057f0                _printf
+ .text.setvbuf  0x0000000000005844       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(setvbuf.o)
+                0x0000000000005844                setvbuf
+ .text._sbrk    0x0000000000005884       0x3c /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_sbrk.o)
+                0x0000000000005884                _sbrk
+ .text.fflush   0x00000000000058c0       0x44 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fflush.o)
+                0x00000000000058c0                fflush
  .text.__check_heap_overflow
-                0x000000000000585c       0x18 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_check_heap.o)
-                0x000000000000585c                __check_heap_overflow
+                0x0000000000005904       0x18 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_check_heap.o)
+                0x0000000000005904                __check_heap_overflow
  .text.DMA0_IRQHandler
-                0x0000000000005874        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005874                DMA0_IRQHandler
- .text.DMA1_IRQHandler
-                0x000000000000587c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000587c                DMA1_IRQHandler
- .text.DMA2_IRQHandler
-                0x0000000000005884        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005884                DMA2_IRQHandler
- .text.DMA3_IRQHandler
-                0x000000000000588c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000588c                DMA3_IRQHandler
- .text.DMA4_IRQHandler
-                0x0000000000005894        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005894                DMA4_IRQHandler
- .text.DMA5_IRQHandler
-                0x000000000000589c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000589c                DMA5_IRQHandler
- .text.DMA6_IRQHandler
-                0x00000000000058a4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058a4                DMA6_IRQHandler
- .text.DMA7_IRQHandler
-                0x00000000000058ac        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058ac                DMA7_IRQHandler
- .text.DMA8_IRQHandler
-                0x00000000000058b4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058b4                DMA8_IRQHandler
- .text.DMA9_IRQHandler
-                0x00000000000058bc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058bc                DMA9_IRQHandler
- .text.DMA10_IRQHandler
-                0x00000000000058c4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058c4                DMA10_IRQHandler
- .text.DMA11_IRQHandler
-                0x00000000000058cc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058cc                DMA11_IRQHandler
- .text.DMA12_IRQHandler
-                0x00000000000058d4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058d4                DMA12_IRQHandler
- .text.DMA13_IRQHandler
-                0x00000000000058dc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058dc                DMA13_IRQHandler
- .text.DMA14_IRQHandler
-                0x00000000000058e4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058e4                DMA14_IRQHandler
- .text.DMA15_IRQHandler
-                0x00000000000058ec        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058ec                DMA15_IRQHandler
- .text.DMA_Error_IRQHandler
-                0x00000000000058f4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058f4                DMA_Error_IRQHandler
- .text.MCM_IRQHandler
-                0x00000000000058fc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000058fc                MCM_IRQHandler
- .text.FTFE_IRQHandler
-                0x0000000000005904        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005904                FTFE_IRQHandler
- .text.Read_Collision_IRQHandler
-                0x000000000000590c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000590c                Read_Collision_IRQHandler
- .text.LVD_LVW_IRQHandler
-                0x0000000000005914        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005914                LVD_LVW_IRQHandler
- .text.LLWU_IRQHandler
                 0x000000000000591c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000591c                LLWU_IRQHandler
- .text.WDOG_EWM_IRQHandler
+                0x000000000000591c                DMA0_IRQHandler
+ .text.DMA1_IRQHandler
                 0x0000000000005924        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005924                WDOG_EWM_IRQHandler
- .text.RNG_IRQHandler
+                0x0000000000005924                DMA1_IRQHandler
+ .text.DMA2_IRQHandler
                 0x000000000000592c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000592c                RNG_IRQHandler
- .text.I2C0_IRQHandler
+                0x000000000000592c                DMA2_IRQHandler
+ .text.DMA3_IRQHandler
                 0x0000000000005934        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005934                I2C0_IRQHandler
- .text.I2C1_IRQHandler
+                0x0000000000005934                DMA3_IRQHandler
+ .text.DMA4_IRQHandler
                 0x000000000000593c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000593c                I2C1_IRQHandler
- .text.SPI0_IRQHandler
+                0x000000000000593c                DMA4_IRQHandler
+ .text.DMA5_IRQHandler
                 0x0000000000005944        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005944                SPI0_IRQHandler
- .text.SPI1_IRQHandler
+                0x0000000000005944                DMA5_IRQHandler
+ .text.DMA6_IRQHandler
                 0x000000000000594c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000594c                SPI1_IRQHandler
- .text.I2S0_Tx_IRQHandler
+                0x000000000000594c                DMA6_IRQHandler
+ .text.DMA7_IRQHandler
                 0x0000000000005954        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005954                I2S0_Tx_IRQHandler
- .text.I2S0_Rx_IRQHandler
+                0x0000000000005954                DMA7_IRQHandler
+ .text.DMA8_IRQHandler
                 0x000000000000595c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000595c                I2S0_Rx_IRQHandler
- .text.UART0_LON_IRQHandler
+                0x000000000000595c                DMA8_IRQHandler
+ .text.DMA9_IRQHandler
                 0x0000000000005964        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005964                UART0_LON_IRQHandler
- .text.UART0_RX_TX_IRQHandler
+                0x0000000000005964                DMA9_IRQHandler
+ .text.DMA10_IRQHandler
                 0x000000000000596c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000596c                UART0_RX_TX_IRQHandler
- .text.UART0_ERR_IRQHandler
+                0x000000000000596c                DMA10_IRQHandler
+ .text.DMA11_IRQHandler
                 0x0000000000005974        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005974                UART0_ERR_IRQHandler
- .text.UART1_RX_TX_IRQHandler
+                0x0000000000005974                DMA11_IRQHandler
+ .text.DMA12_IRQHandler
                 0x000000000000597c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000597c                UART1_RX_TX_IRQHandler
- .text.UART1_ERR_IRQHandler
+                0x000000000000597c                DMA12_IRQHandler
+ .text.DMA13_IRQHandler
                 0x0000000000005984        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005984                UART1_ERR_IRQHandler
- .text.UART2_RX_TX_IRQHandler
+                0x0000000000005984                DMA13_IRQHandler
+ .text.DMA14_IRQHandler
                 0x000000000000598c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000598c                UART2_RX_TX_IRQHandler
- .text.UART2_ERR_IRQHandler
+                0x000000000000598c                DMA14_IRQHandler
+ .text.DMA15_IRQHandler
                 0x0000000000005994        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005994                UART2_ERR_IRQHandler
- .text.UART3_RX_TX_IRQHandler
+                0x0000000000005994                DMA15_IRQHandler
+ .text.DMA_Error_IRQHandler
                 0x000000000000599c        0x8 ./startup/startup_mk64f12.o
-                0x000000000000599c                UART3_RX_TX_IRQHandler
- .text.UART3_ERR_IRQHandler
+                0x000000000000599c                DMA_Error_IRQHandler
+ .text.MCM_IRQHandler
                 0x00000000000059a4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059a4                UART3_ERR_IRQHandler
- .text.ADC0_IRQHandler
+                0x00000000000059a4                MCM_IRQHandler
+ .text.FTFE_IRQHandler
                 0x00000000000059ac        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059ac                ADC0_IRQHandler
- .text.CMP0_IRQHandler
+                0x00000000000059ac                FTFE_IRQHandler
+ .text.Read_Collision_IRQHandler
                 0x00000000000059b4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059b4                CMP0_IRQHandler
- .text.CMP1_IRQHandler
+                0x00000000000059b4                Read_Collision_IRQHandler
+ .text.LVD_LVW_IRQHandler
                 0x00000000000059bc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059bc                CMP1_IRQHandler
- .text.FTM0_IRQHandler
+                0x00000000000059bc                LVD_LVW_IRQHandler
+ .text.LLWU_IRQHandler
                 0x00000000000059c4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059c4                FTM0_IRQHandler
- .text.FTM1_IRQHandler
+                0x00000000000059c4                LLWU_IRQHandler
+ .text.WDOG_EWM_IRQHandler
                 0x00000000000059cc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059cc                FTM1_IRQHandler
- .text.FTM2_IRQHandler
+                0x00000000000059cc                WDOG_EWM_IRQHandler
+ .text.RNG_IRQHandler
                 0x00000000000059d4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059d4                FTM2_IRQHandler
- .text.CMT_IRQHandler
+                0x00000000000059d4                RNG_IRQHandler
+ .text.I2C0_IRQHandler
                 0x00000000000059dc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059dc                CMT_IRQHandler
- .text.RTC_IRQHandler
+                0x00000000000059dc                I2C0_IRQHandler
+ .text.I2C1_IRQHandler
                 0x00000000000059e4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059e4                RTC_IRQHandler
- .text.RTC_Seconds_IRQHandler
+                0x00000000000059e4                I2C1_IRQHandler
+ .text.SPI0_IRQHandler
                 0x00000000000059ec        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059ec                RTC_Seconds_IRQHandler
- .text.PIT0_IRQHandler
+                0x00000000000059ec                SPI0_IRQHandler
+ .text.SPI1_IRQHandler
                 0x00000000000059f4        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059f4                PIT0_IRQHandler
- .text.PIT1_IRQHandler
+                0x00000000000059f4                SPI1_IRQHandler
+ .text.I2S0_Tx_IRQHandler
                 0x00000000000059fc        0x8 ./startup/startup_mk64f12.o
-                0x00000000000059fc                PIT1_IRQHandler
- .text.PIT2_IRQHandler
+                0x00000000000059fc                I2S0_Tx_IRQHandler
+ .text.I2S0_Rx_IRQHandler
                 0x0000000000005a04        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a04                PIT2_IRQHandler
- .text.PIT3_IRQHandler
+                0x0000000000005a04                I2S0_Rx_IRQHandler
+ .text.UART0_LON_IRQHandler
                 0x0000000000005a0c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a0c                PIT3_IRQHandler
- .text.PDB0_IRQHandler
+                0x0000000000005a0c                UART0_LON_IRQHandler
+ .text.UART0_RX_TX_IRQHandler
                 0x0000000000005a14        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a14                PDB0_IRQHandler
- .text.USB0_IRQHandler
+                0x0000000000005a14                UART0_RX_TX_IRQHandler
+ .text.UART0_ERR_IRQHandler
                 0x0000000000005a1c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a1c                USB0_IRQHandler
- .text.USBDCD_IRQHandler
+                0x0000000000005a1c                UART0_ERR_IRQHandler
+ .text.UART1_RX_TX_IRQHandler
                 0x0000000000005a24        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a24                USBDCD_IRQHandler
- .text.Reserved71_IRQHandler
+                0x0000000000005a24                UART1_RX_TX_IRQHandler
+ .text.UART1_ERR_IRQHandler
                 0x0000000000005a2c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a2c                Reserved71_IRQHandler
- .text.DAC0_IRQHandler
+                0x0000000000005a2c                UART1_ERR_IRQHandler
+ .text.UART2_RX_TX_IRQHandler
                 0x0000000000005a34        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a34                DAC0_IRQHandler
- .text.MCG_IRQHandler
+                0x0000000000005a34                UART2_RX_TX_IRQHandler
+ .text.UART2_ERR_IRQHandler
                 0x0000000000005a3c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a3c                MCG_IRQHandler
- .text.LPTMR0_IRQHandler
+                0x0000000000005a3c                UART2_ERR_IRQHandler
+ .text.UART3_RX_TX_IRQHandler
                 0x0000000000005a44        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a44                LPTMR0_IRQHandler
- .text.PORTA_IRQHandler
+                0x0000000000005a44                UART3_RX_TX_IRQHandler
+ .text.UART3_ERR_IRQHandler
                 0x0000000000005a4c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a4c                PORTA_IRQHandler
- .text.PORTB_IRQHandler
+                0x0000000000005a4c                UART3_ERR_IRQHandler
+ .text.ADC0_IRQHandler
                 0x0000000000005a54        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a54                PORTB_IRQHandler
- .text.PORTC_IRQHandler
+                0x0000000000005a54                ADC0_IRQHandler
+ .text.CMP0_IRQHandler
                 0x0000000000005a5c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a5c                PORTC_IRQHandler
- .text.PORTD_IRQHandler
+                0x0000000000005a5c                CMP0_IRQHandler
+ .text.CMP1_IRQHandler
                 0x0000000000005a64        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a64                PORTD_IRQHandler
- .text.PORTE_IRQHandler
+                0x0000000000005a64                CMP1_IRQHandler
+ .text.FTM0_IRQHandler
                 0x0000000000005a6c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a6c                PORTE_IRQHandler
- .text.SWI_IRQHandler
+                0x0000000000005a6c                FTM0_IRQHandler
+ .text.FTM1_IRQHandler
                 0x0000000000005a74        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a74                SWI_IRQHandler
- .text.SPI2_IRQHandler
+                0x0000000000005a74                FTM1_IRQHandler
+ .text.FTM2_IRQHandler
                 0x0000000000005a7c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a7c                SPI2_IRQHandler
- .text.UART4_RX_TX_IRQHandler
+                0x0000000000005a7c                FTM2_IRQHandler
+ .text.CMT_IRQHandler
                 0x0000000000005a84        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a84                UART4_RX_TX_IRQHandler
- .text.UART4_ERR_IRQHandler
+                0x0000000000005a84                CMT_IRQHandler
+ .text.RTC_IRQHandler
                 0x0000000000005a8c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a8c                UART4_ERR_IRQHandler
- .text.UART5_RX_TX_IRQHandler
+                0x0000000000005a8c                RTC_IRQHandler
+ .text.RTC_Seconds_IRQHandler
                 0x0000000000005a94        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a94                UART5_RX_TX_IRQHandler
- .text.UART5_ERR_IRQHandler
+                0x0000000000005a94                RTC_Seconds_IRQHandler
+ .text.PIT0_IRQHandler
                 0x0000000000005a9c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005a9c                UART5_ERR_IRQHandler
- .text.CMP2_IRQHandler
+                0x0000000000005a9c                PIT0_IRQHandler
+ .text.PIT1_IRQHandler
                 0x0000000000005aa4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005aa4                CMP2_IRQHandler
- .text.FTM3_IRQHandler
+                0x0000000000005aa4                PIT1_IRQHandler
+ .text.PIT2_IRQHandler
                 0x0000000000005aac        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005aac                FTM3_IRQHandler
- .text.DAC1_IRQHandler
+                0x0000000000005aac                PIT2_IRQHandler
+ .text.PIT3_IRQHandler
                 0x0000000000005ab4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005ab4                DAC1_IRQHandler
- .text.ADC1_IRQHandler
+                0x0000000000005ab4                PIT3_IRQHandler
+ .text.PDB0_IRQHandler
                 0x0000000000005abc        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005abc                ADC1_IRQHandler
- .text.I2C2_IRQHandler
+                0x0000000000005abc                PDB0_IRQHandler
+ .text.USB0_IRQHandler
                 0x0000000000005ac4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005ac4                I2C2_IRQHandler
- .text.CAN0_ORed_Message_buffer_IRQHandler
+                0x0000000000005ac4                USB0_IRQHandler
+ .text.USBDCD_IRQHandler
                 0x0000000000005acc        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005acc                CAN0_ORed_Message_buffer_IRQHandler
- .text.CAN0_Bus_Off_IRQHandler
+                0x0000000000005acc                USBDCD_IRQHandler
+ .text.Reserved71_IRQHandler
                 0x0000000000005ad4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005ad4                CAN0_Bus_Off_IRQHandler
- .text.CAN0_Error_IRQHandler
+                0x0000000000005ad4                Reserved71_IRQHandler
+ .text.DAC0_IRQHandler
                 0x0000000000005adc        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005adc                CAN0_Error_IRQHandler
- .text.CAN0_Tx_Warning_IRQHandler
+                0x0000000000005adc                DAC0_IRQHandler
+ .text.MCG_IRQHandler
                 0x0000000000005ae4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005ae4                CAN0_Tx_Warning_IRQHandler
- .text.CAN0_Rx_Warning_IRQHandler
+                0x0000000000005ae4                MCG_IRQHandler
+ .text.LPTMR0_IRQHandler
                 0x0000000000005aec        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005aec                CAN0_Rx_Warning_IRQHandler
- .text.CAN0_Wake_Up_IRQHandler
+                0x0000000000005aec                LPTMR0_IRQHandler
+ .text.PORTA_IRQHandler
                 0x0000000000005af4        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005af4                CAN0_Wake_Up_IRQHandler
- .text.SDHC_IRQHandler
+                0x0000000000005af4                PORTA_IRQHandler
+ .text.PORTB_IRQHandler
                 0x0000000000005afc        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005afc                SDHC_IRQHandler
- .text.ENET_1588_Timer_IRQHandler
+                0x0000000000005afc                PORTB_IRQHandler
+ .text.PORTC_IRQHandler
                 0x0000000000005b04        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005b04                ENET_1588_Timer_IRQHandler
- .text.ENET_Transmit_IRQHandler
+                0x0000000000005b04                PORTC_IRQHandler
+ .text.PORTD_IRQHandler
                 0x0000000000005b0c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005b0c                ENET_Transmit_IRQHandler
- .text.ENET_Receive_IRQHandler
+                0x0000000000005b0c                PORTD_IRQHandler
+ .text.PORTE_IRQHandler
                 0x0000000000005b14        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005b14                ENET_Receive_IRQHandler
- .text.ENET_Error_IRQHandler
+                0x0000000000005b14                PORTE_IRQHandler
+ .text.SWI_IRQHandler
                 0x0000000000005b1c        0x8 ./startup/startup_mk64f12.o
-                0x0000000000005b1c                ENET_Error_IRQHandler
+                0x0000000000005b1c                SWI_IRQHandler
+ .text.SPI2_IRQHandler
+                0x0000000000005b24        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b24                SPI2_IRQHandler
+ .text.UART4_RX_TX_IRQHandler
+                0x0000000000005b2c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b2c                UART4_RX_TX_IRQHandler
+ .text.UART4_ERR_IRQHandler
+                0x0000000000005b34        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b34                UART4_ERR_IRQHandler
+ .text.UART5_RX_TX_IRQHandler
+                0x0000000000005b3c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b3c                UART5_RX_TX_IRQHandler
+ .text.UART5_ERR_IRQHandler
+                0x0000000000005b44        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b44                UART5_ERR_IRQHandler
+ .text.CMP2_IRQHandler
+                0x0000000000005b4c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b4c                CMP2_IRQHandler
+ .text.FTM3_IRQHandler
+                0x0000000000005b54        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b54                FTM3_IRQHandler
+ .text.DAC1_IRQHandler
+                0x0000000000005b5c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b5c                DAC1_IRQHandler
+ .text.ADC1_IRQHandler
+                0x0000000000005b64        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b64                ADC1_IRQHandler
+ .text.I2C2_IRQHandler
+                0x0000000000005b6c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b6c                I2C2_IRQHandler
+ .text.CAN0_ORed_Message_buffer_IRQHandler
+                0x0000000000005b74        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b74                CAN0_ORed_Message_buffer_IRQHandler
+ .text.CAN0_Bus_Off_IRQHandler
+                0x0000000000005b7c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b7c                CAN0_Bus_Off_IRQHandler
+ .text.CAN0_Error_IRQHandler
+                0x0000000000005b84        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b84                CAN0_Error_IRQHandler
+ .text.CAN0_Tx_Warning_IRQHandler
+                0x0000000000005b8c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b8c                CAN0_Tx_Warning_IRQHandler
+ .text.CAN0_Rx_Warning_IRQHandler
+                0x0000000000005b94        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b94                CAN0_Rx_Warning_IRQHandler
+ .text.CAN0_Wake_Up_IRQHandler
+                0x0000000000005b9c        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005b9c                CAN0_Wake_Up_IRQHandler
+ .text.SDHC_IRQHandler
+                0x0000000000005ba4        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005ba4                SDHC_IRQHandler
+ .text.ENET_1588_Timer_IRQHandler
+                0x0000000000005bac        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005bac                ENET_1588_Timer_IRQHandler
+ .text.ENET_Transmit_IRQHandler
+                0x0000000000005bb4        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005bb4                ENET_Transmit_IRQHandler
+ .text.ENET_Receive_IRQHandler
+                0x0000000000005bbc        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005bbc                ENET_Receive_IRQHandler
+ .text.ENET_Error_IRQHandler
+                0x0000000000005bc4        0x8 ./startup/startup_mk64f12.o
+                0x0000000000005bc4                ENET_Error_IRQHandler
  .text.HardFault_Handler
-                0x0000000000005b24       0x2c ./source/semihost_hardfault.o
-                0x0000000000005b24                HardFault_Handler
+                0x0000000000005bcc       0x2c ./source/semihost_hardfault.o
+                0x0000000000005bcc                HardFault_Handler
  .text.UART0_RX_TX_DriverIRQHandler
-                0x0000000000005b50       0x10 ./drivers/fsl_uart.o
-                0x0000000000005b50                UART0_RX_TX_DriverIRQHandler
+                0x0000000000005bf8       0x10 ./drivers/fsl_uart.o
+                0x0000000000005bf8                UART0_RX_TX_DriverIRQHandler
  .text.UART1_RX_TX_DriverIRQHandler
-                0x0000000000005b60       0x10 ./drivers/fsl_uart.o
-                0x0000000000005b60                UART1_RX_TX_DriverIRQHandler
+                0x0000000000005c08       0x10 ./drivers/fsl_uart.o
+                0x0000000000005c08                UART1_RX_TX_DriverIRQHandler
  .text.UART2_RX_TX_DriverIRQHandler
-                0x0000000000005b70       0x10 ./drivers/fsl_uart.o
-                0x0000000000005b70                UART2_RX_TX_DriverIRQHandler
+                0x0000000000005c18       0x10 ./drivers/fsl_uart.o
+                0x0000000000005c18                UART2_RX_TX_DriverIRQHandler
  .text.UART3_RX_TX_DriverIRQHandler
-                0x0000000000005b80       0x10 ./drivers/fsl_uart.o
-                0x0000000000005b80                UART3_RX_TX_DriverIRQHandler
+                0x0000000000005c28       0x10 ./drivers/fsl_uart.o
+                0x0000000000005c28                UART3_RX_TX_DriverIRQHandler
  .text.UART4_RX_TX_DriverIRQHandler
-                0x0000000000005b90       0x10 ./drivers/fsl_uart.o
-                0x0000000000005b90                UART4_RX_TX_DriverIRQHandler
+                0x0000000000005c38       0x10 ./drivers/fsl_uart.o
+                0x0000000000005c38                UART4_RX_TX_DriverIRQHandler
  .text.UART5_RX_TX_DriverIRQHandler
-                0x0000000000005ba0       0x10 ./drivers/fsl_uart.o
-                0x0000000000005ba0                UART5_RX_TX_DriverIRQHandler
+                0x0000000000005c48       0x10 ./drivers/fsl_uart.o
+                0x0000000000005c48                UART5_RX_TX_DriverIRQHandler
  .text.BOARD_InitBootClocks
-                0x0000000000005bb0        0xc ./board/clock_config.o
-                0x0000000000005bb0                BOARD_InitBootClocks
+                0x0000000000005c58        0xc ./board/clock_config.o
+                0x0000000000005c58                BOARD_InitBootClocks
  .text.BOARD_InitBootPeripherals
-                0x0000000000005bbc        0xe ./board/peripherals.o
-                0x0000000000005bbc                BOARD_InitBootPeripherals
+                0x0000000000005c64        0xe ./board/peripherals.o
+                0x0000000000005c64                BOARD_InitBootPeripherals
  .text.BOARD_InitBootPins
-                0x0000000000005bca        0xe ./board/pin_mux.o
-                0x0000000000005bca                BOARD_InitBootPins
+                0x0000000000005c72        0xe ./board/pin_mux.o
+                0x0000000000005c72                BOARD_InitBootPins
  .text.prvTraceGetQueueNumber
-                0x0000000000005bd8       0x18 ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005bd8                prvTraceGetQueueNumber
+                0x0000000000005c80       0x18 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005c80                prvTraceGetQueueNumber
  .text.prvTraceGetQueueType
-                0x0000000000005bf0       0x18 ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005bf0                prvTraceGetQueueType
+                0x0000000000005c98       0x18 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005c98                prvTraceGetQueueType
  .text.prvTraceGetTaskNumberLow16
-                0x0000000000005c08       0x1a ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005c08                prvTraceGetTaskNumberLow16
+                0x0000000000005cb0       0x1a ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005cb0                prvTraceGetTaskNumberLow16
  .text.prvTraceGetTaskNumberHigh16
-                0x0000000000005c22       0x1c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005c22                prvTraceGetTaskNumberHigh16
+                0x0000000000005cca       0x1c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005cca                prvTraceGetTaskNumberHigh16
  .text.prvTraceSetTaskNumberLow16
-                0x0000000000005c3e       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005c3e                prvTraceSetTaskNumberLow16
+                0x0000000000005ce6       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005ce6                prvTraceSetTaskNumberLow16
  .text.prvTraceSetTaskNumberHigh16
-                0x0000000000005c6a       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005c6a                prvTraceSetTaskNumberHigh16
+                0x0000000000005d12       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005d12                prvTraceSetTaskNumberHigh16
  .text.prvTraceGetQueueNumberLow16
-                0x0000000000005c96       0x1a ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005c96                prvTraceGetQueueNumberLow16
+                0x0000000000005d3e       0x1a ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005d3e                prvTraceGetQueueNumberLow16
  .text.prvTraceGetQueueNumberHigh16
-                0x0000000000005cb0       0x1c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005cb0                prvTraceGetQueueNumberHigh16
+                0x0000000000005d58       0x1c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005d58                prvTraceGetQueueNumberHigh16
  .text.prvTraceSetQueueNumberLow16
-                0x0000000000005ccc       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005ccc                prvTraceSetQueueNumberLow16
+                0x0000000000005d74       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005d74                prvTraceSetQueueNumberLow16
  .text.prvTraceSetQueueNumberHigh16
-                0x0000000000005cf8       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005cf8                prvTraceSetQueueNumberHigh16
+                0x0000000000005da0       0x2c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005da0                prvTraceSetQueueNumberHigh16
  .text.prvTraceGetCurrentTaskHandle
-                0x0000000000005d24        0xe ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                0x0000000000005d24                prvTraceGetCurrentTaskHandle
+                0x0000000000005dcc        0xe ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x0000000000005dcc                prvTraceGetCurrentTaskHandle
  .text.vTraceStart
-                0x0000000000005d32        0xc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000000005d32                vTraceStart
+                0x0000000000005dda        0xc ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000005dda                vTraceStart
  .text.prvStrncpy
-                0x0000000000005d3e       0x4c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000005de6       0x4c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .text.vListInitialise
-                0x0000000000005d8a       0x40 ./amazon-freertos/FreeRTOS/list.o
-                0x0000000000005d8a                vListInitialise
+                0x0000000000005e32       0x40 ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000005e32                vListInitialise
  .text.vListInitialiseItem
-                0x0000000000005dca       0x1a ./amazon-freertos/FreeRTOS/list.o
-                0x0000000000005dca                vListInitialiseItem
+                0x0000000000005e72       0x1a ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000005e72                vListInitialiseItem
  .text.vListInsertEnd
-                0x0000000000005de4       0x48 ./amazon-freertos/FreeRTOS/list.o
-                0x0000000000005de4                vListInsertEnd
+                0x0000000000005e8c       0x48 ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000005e8c                vListInsertEnd
  .text.vListInsert
-                0x0000000000005e2c       0x72 ./amazon-freertos/FreeRTOS/list.o
-                0x0000000000005e2c                vListInsert
+                0x0000000000005ed4       0x72 ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000005ed4                vListInsert
  .text.uxListRemove
-                0x0000000000005e9e       0x54 ./amazon-freertos/FreeRTOS/list.o
-                0x0000000000005e9e                uxListRemove
+                0x0000000000005f46       0x54 ./amazon-freertos/FreeRTOS/list.o
+                0x0000000000005f46                uxListRemove
  .text.uxQueueGetQueueNumber
-                0x0000000000005ef2       0x18 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000005ef2                uxQueueGetQueueNumber
+                0x0000000000005f9a       0x18 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000005f9a                uxQueueGetQueueNumber
  .text.vQueueSetQueueNumber
-                0x0000000000005f0a       0x1c ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000005f0a                vQueueSetQueueNumber
+                0x0000000000005fb2       0x1c ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000005fb2                vQueueSetQueueNumber
  .text.ucQueueGetQueueType
-                0x0000000000005f26       0x1a ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000005f26                ucQueueGetQueueType
+                0x0000000000005fce       0x1a ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000005fce                ucQueueGetQueueType
  .text.prvCopyDataToQueue
-                0x0000000000005f40       0xd4 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000005fe8       0xd4 ./amazon-freertos/FreeRTOS/queue.o
  .text.prvCopyDataFromQueue
-                0x0000000000006014       0x4c ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000060bc       0x4c ./amazon-freertos/FreeRTOS/queue.o
  .text.prvUnlockQueue
-                0x0000000000006060       0xa4 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000006108       0xa4 ./amazon-freertos/FreeRTOS/queue.o
  .text.prvIsQueueEmpty
-                0x0000000000006104       0x2c ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000061ac       0x2c ./amazon-freertos/FreeRTOS/queue.o
  .text.prvIsQueueFull
-                0x0000000000006130       0x30 ./amazon-freertos/FreeRTOS/queue.o
+                0x00000000000061d8       0x30 ./amazon-freertos/FreeRTOS/queue.o
  .text.vQueueWaitForMessageRestricted
-                0x0000000000006160       0x68 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000000006160                vQueueWaitForMessageRestricted
+                0x0000000000006208       0x68 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000006208                vQueueWaitForMessageRestricted
  .text.xTaskCreate
-                0x00000000000061c8       0x82 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000061c8                xTaskCreate
+                0x0000000000006270       0x82 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000006270                xTaskCreate
  .text.prvInitialiseNewTask
-                0x000000000000624a      0x12a ./amazon-freertos/FreeRTOS/tasks.o
+                0x00000000000062f2      0x12a ./amazon-freertos/FreeRTOS/tasks.o
  .text.uxTaskGetTaskNumber
-                0x0000000000006374       0x2c ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000000006374                uxTaskGetTaskNumber
+                0x000000000000641c       0x2c ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000000000641c                uxTaskGetTaskNumber
  .text.vTaskSetTaskNumber
-                0x00000000000063a0       0x26 ./amazon-freertos/FreeRTOS/tasks.o
-                0x00000000000063a0                vTaskSetTaskNumber
+                0x0000000000006448       0x26 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000006448                vTaskSetTaskNumber
  .text.prvDeleteTCB
-                0x00000000000063c6       0x20 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000000000646e       0x20 ./amazon-freertos/FreeRTOS/tasks.o
  .text.prvTimerTask
-                0x00000000000063e6       0x24 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000000000648e       0x24 ./amazon-freertos/FreeRTOS/timers.o
  .text.SystemInitHook
-                0x000000000000640a        0xe ./CMSIS/system_MK64F12.o
-                0x000000000000640a                SystemInitHook
- .text.__main   0x0000000000006418        0xe /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(_cr__main.o)
-                0x0000000000006418                __main
-                0x0000000000006418                __CR_SEMIHOST
- .text.memcpy   0x0000000000006426        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(memcpy.o)
-                0x0000000000006426                memcpy
- .text.memset   0x000000000000642a        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(memset.o)
-                0x000000000000642a                memset
+                0x00000000000064b2        0xe ./CMSIS/system_MK64F12.o
+                0x00000000000064b2                SystemInitHook
+ .text.__main   0x00000000000064c0        0xe /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(_cr__main.o)
+                0x00000000000064c0                __main
+                0x00000000000064c0                __CR_SEMIHOST
+ .text.memcpy   0x00000000000064ce        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(memcpy.o)
+                0x00000000000064ce                memcpy
+ .text.memset   0x00000000000064d2        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(memset.o)
+                0x00000000000064d2                memset
  .text._deferredlazyseek
-                0x000000000000642e       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_deferredlazyseek.o)
-                0x000000000000642e                _deferredlazyseek
+                0x00000000000064d6       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_deferredlazyseek.o)
+                0x00000000000064d6                _deferredlazyseek
  .text.__flsbuf
-                0x000000000000646e      0x140 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_deferredlazyseek.o)
-                0x000000000000646e                __flsbuf
- .text._fflush  0x00000000000065ae       0x52 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fflush.o)
-                0x00000000000065ae                _fflush
- .text.free     0x0000000000006600       0x30 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
-                0x0000000000006600                free
+                0x0000000000006516      0x140 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_deferredlazyseek.o)
+                0x0000000000006516                __flsbuf
+ .text._fflush  0x0000000000006656       0x52 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fflush.o)
+                0x0000000000006656                _fflush
+ .text.free     0x00000000000066a8       0x30 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
+                0x00000000000066a8                free
  .text.no_fp_display
-                0x0000000000006630        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
- .text.strlen   0x0000000000006634       0x4a /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
-                0x0000000000006634                strlen
- .text._fdopen  0x000000000000667e       0x68 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fdopen.o)
-                0x000000000000667e                _fdopen
- .text.fclose   0x00000000000066e6       0x58 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fclose.o)
-                0x00000000000066e6                fclose
- .text.remove   0x000000000000673e       0x14 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(remove.o)
-                0x000000000000673e                remove
+                0x00000000000066d8        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
+ .text.strcpy   0x00000000000066dc       0x42 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
+                0x00000000000066dc                strcpy
+ .text.strlen   0x000000000000671e       0x4a /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
+                0x000000000000671e                strlen
+ .text._fdopen  0x0000000000006768       0x68 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fdopen.o)
+                0x0000000000006768                _fdopen
+ .text.fclose   0x00000000000067d0       0x58 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fclose.o)
+                0x00000000000067d0                fclose
+ .text.remove   0x0000000000006828       0x14 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(remove.o)
+                0x0000000000006828                remove
  .text._do_fflush
-                0x0000000000006752       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_do_fflush.o)
-                0x0000000000006752                _do_fflush
+                0x000000000000683c       0x40 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_do_fflush.o)
+                0x000000000000683c                _do_fflush
  .text.__aeabi_memcpy
-                0x0000000000006792       0x34 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
-                0x0000000000006792                __aeabi_memcpy
-                0x000000000000679c                __aeabi_memcpy4
-                0x000000000000679c                __aeabi_memcpy8
+                0x000000000000687c       0x34 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
+                0x000000000000687c                __aeabi_memcpy
+                0x0000000000006886                __aeabi_memcpy4
+                0x0000000000006886                __aeabi_memcpy8
  .text.__aeabi_memset_lowlevel
-                0x00000000000067c6       0x32 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
-                0x00000000000067c6                __aeabi_lowlevel_memset
+                0x00000000000068b0       0x32 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
+                0x00000000000068b0                __aeabi_lowlevel_memset
  .text.__sys_close
-                0x00000000000067f8        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_close.o)
-                0x00000000000067f8                __sys_close
+                0x00000000000068e2        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_close.o)
+                0x00000000000068e2                __sys_close
  .text.__sys_flen
-                0x0000000000006804        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_flen.o)
-                0x0000000000006804                __sys_flen
+                0x00000000000068ee        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_flen.o)
+                0x00000000000068ee                __sys_flen
  .text.__sys_istty
-                0x0000000000006810        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_istty.o)
-                0x0000000000006810                __sys_istty
+                0x00000000000068fa        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_istty.o)
+                0x00000000000068fa                __sys_istty
  .text.__sys_remove
-                0x000000000000681c        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_remove.o)
-                0x000000000000681c                __sys_remove
+                0x0000000000006906        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_remove.o)
+                0x0000000000006906                __sys_remove
  .text.__sys_seek
-                0x0000000000006828        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_seek.o)
-                0x0000000000006828                __sys_seek
+                0x0000000000006912        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_seek.o)
+                0x0000000000006912                __sys_seek
  .text.__sys_tmpnam
-                0x0000000000006834        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_tmpnam.o)
-                0x0000000000006834                __sys_tmpnam
+                0x000000000000691e        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_tmpnam.o)
+                0x000000000000691e                __sys_tmpnam
  .text.__sys_write
-                0x0000000000006840        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_write.o)
-                0x0000000000006840                __sys_write
+                0x000000000000692a        0xc /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_write.o)
+                0x000000000000692a                __sys_write
  *(SORT_BY_ALIGNMENT(.rodata) SORT_BY_ALIGNMENT(.rodata.*) SORT_BY_ALIGNMENT(.constdata) SORT_BY_ALIGNMENT(.constdata.*))
- .rodata        0x000000000000684c       0x17 ./source/TP4_SO2.o
- *fill*         0x0000000000006863        0x1 ff
- .rodata        0x0000000000006864      0x2fe ./amazon-freertos/TraceRecorder/trcKernelPort.o
- *fill*         0x0000000000006b62        0x2 ff
- .rodata        0x0000000000006b64     0x1150 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .rodata        0x0000000000007cb4        0x5 ./amazon-freertos/FreeRTOS/tasks.o
- *fill*         0x0000000000007cb9        0x3 ff
- .rodata        0x0000000000007cbc        0xd ./amazon-freertos/FreeRTOS/timers.o
- *fill*         0x0000000000007cc9        0x3 ff
+ *fill*         0x0000000000006936        0x2 ff
+ .rodata        0x0000000000006938       0xab ./source/TP4_SO2.o
+ *fill*         0x00000000000069e3        0x1 ff
+ .rodata        0x00000000000069e4      0x2fe ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ *fill*         0x0000000000006ce2        0x2 ff
+ .rodata        0x0000000000006ce4     0x1150 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .rodata        0x0000000000007e34        0x5 ./amazon-freertos/FreeRTOS/tasks.o
+ *fill*         0x0000000000007e39        0x3 ff
+ .rodata        0x0000000000007e3c        0xd ./amazon-freertos/FreeRTOS/timers.o
+ *fill*         0x0000000000007e49        0x3 ff
  .rodata.__num_Ciob_streams
-                0x0000000000007ccc        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__ciob.o)
-                0x0000000000007ccc                __num_Ciob_streams
+                0x0000000000007e4c        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__ciob.o)
+                0x0000000000007e4c                __num_Ciob_streams
  .rodata._Csys_alloc.str1.1
-                0x0000000000007cd0       0x18 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
+                0x0000000000007e50       0x18 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(alloc.o)
  .rodata._initio.str1.1
-                0x0000000000007ce8        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o)
+                0x0000000000007e68        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x0000000000007cec       0x37 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
+                0x0000000000007e6c       0x37 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
                                          0x38 (size before relaxing)
-                0x0000000000007d28                . = ALIGN (0x8)
- *fill*         0x0000000000007d23        0x5 ff
+                0x0000000000007ea8                . = ALIGN (0x8)
+ *fill*         0x0000000000007ea3        0x5 ff
 
-.glue_7         0x0000000000007d28        0x0
- .glue_7        0x0000000000007d28        0x0 linker stubs
+.glue_7         0x0000000000007ea8        0x0
+ .glue_7        0x0000000000007ea8        0x0 linker stubs
 
-.glue_7t        0x0000000000007d28        0x0
- .glue_7t       0x0000000000007d28        0x0 linker stubs
+.glue_7t        0x0000000000007ea8        0x0
+ .glue_7t       0x0000000000007ea8        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000007d28        0x0
- .vfp11_veneer  0x0000000000007d28        0x0 linker stubs
+.vfp11_veneer   0x0000000000007ea8        0x0
+ .vfp11_veneer  0x0000000000007ea8        0x0 linker stubs
 
-.v4_bx          0x0000000000007d28        0x0
- .v4_bx         0x0000000000007d28        0x0 linker stubs
+.v4_bx          0x0000000000007ea8        0x0
+ .v4_bx         0x0000000000007ea8        0x0 linker stubs
 
-.iplt           0x0000000000007d28        0x0
- .iplt          0x0000000000007d28        0x0 ./startup/startup_mk64f12.o
+.iplt           0x0000000000007ea8        0x0
+ .iplt          0x0000000000007ea8        0x0 ./startup/startup_mk64f12.o
 
-.rel.dyn        0x0000000000007d28        0x0
- .rel.iplt      0x0000000000007d28        0x0 ./startup/startup_mk64f12.o
+.rel.dyn        0x0000000000007ea8        0x0
+ .rel.iplt      0x0000000000007ea8        0x0 ./startup/startup_mk64f12.o
 
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
-                0x0000000000007d28                __exidx_start = .
+                0x0000000000007ea8                __exidx_start = .
 
 .ARM.exidx
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x0000000000007d28                __exidx_end = .
-                0x0000000000007d28                _etext = .
+                0x0000000000007ea8                __exidx_end = .
+                0x0000000000007ea8                _etext = .
 
 .m_usb_data
  *(SORT_BY_ALIGNMENT(m_usb_bdt))
 
-.data_RAM2      0x000000001fff0000        0x0 load address 0x0000000000007d28
+.data_RAM2      0x000000001fff0000        0x0 load address 0x0000000000007ea8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2, .)
  *(SORT_BY_ALIGNMENT(.ramfunc.$RAM2))
@@ -3146,7 +3150,7 @@ END GROUP
                 0x000000001fff0000                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (__end_data_RAM2, .)
 
-.data_RAM3      0x0000000014000000        0x0 load address 0x0000000000007d28
+.data_RAM3      0x0000000014000000        0x0 load address 0x0000000000007ea8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3, .)
  *(SORT_BY_ALIGNMENT(.ramfunc.$RAM3))
@@ -3162,7 +3166,7 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _end_uninit_RESERVED = .
 
-.data           0x0000000020000000       0x18 load address 0x0000000000007d28
+.data           0x0000000020000000       0x18 load address 0x0000000000007ea8
  FILL mask 0xff
                 0x0000000020000000                _data = .
  *(SORT_BY_ALIGNMENT(vtable))
@@ -3188,7 +3192,7 @@ END GROUP
                 0x0000000020000018                . = ALIGN (0x8)
                 0x0000000020000018                _edata = .
 
-.igot.plt       0x0000000020000018        0x0 load address 0x0000000000007d40
+.igot.plt       0x0000000020000018        0x0 load address 0x0000000000007ec0
  .igot.plt      0x0000000020000018        0x0 ./startup/startup_mk64f12.o
 
 .bss_RAM2       0x000000001fff0000        0x0
@@ -3205,10 +3209,10 @@ END GROUP
                 0x0000000014000000                . = ALIGN ((. != 0x0)?0x8:0x1)
                 [!provide]                        PROVIDE (__end_bss_RAM3, .)
 
-.bss            0x0000000020000018     0x4468
+.bss            0x0000000020000018    0x1bb68
                 0x0000000020000018                _bss = .
  *(SORT_BY_ALIGNMENT(.bss*))
- .bss.i.7891    0x0000000020000018        0x4 ./source/TP4_SO2.o
+ .bss.i.7988    0x0000000020000018        0x4 ./source/TP4_SO2.o
  .bss.s_uartHandle
                 0x000000002000001c       0x18 ./drivers/fsl_uart.o
  .bss.s_uartIsr
@@ -3255,100 +3259,100 @@ END GROUP
                 0x0000000020002904        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
                 0x0000000020002904                init_hwtc_count
  .bss.RecorderData
-                0x0000000020002908     0x1918 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000020002908    0x19018 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
                 0x0000000020002908                RecorderData
  .bss.RecorderDataPtr
-                0x0000000020004220        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x0000000020004220                RecorderDataPtr
+                0x000000002001b920        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001b920                RecorderDataPtr
  .bss.indexOfHandle.7763
-                0x0000000020004224        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001b924        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .bss.old_timestamp.7826
-                0x0000000020004228        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001b928        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .bss.last_hwtc_count.7864
-                0x000000002000422c        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001b92c        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .bss.last_hwtc_rest.7866
-                0x0000000020004230        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001b930        0x4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .bss.ulMaxPRIGROUPValue
-                0x0000000020004234        0x4 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x000000002001b934        0x4 ./amazon-freertos/FreeRTOS/portable/port.o
  .bss.xQueueRegistry
-                0x0000000020004238       0x40 ./amazon-freertos/FreeRTOS/queue.o
-                0x0000000020004238                xQueueRegistry
+                0x000000002001b938       0x40 ./amazon-freertos/FreeRTOS/queue.o
+                0x000000002001b938                xQueueRegistry
  .bss.pxCurrentTCB
-                0x0000000020004278        0x4 ./amazon-freertos/FreeRTOS/tasks.o
-                0x0000000020004278                pxCurrentTCB
+                0x000000002001b978        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001b978                pxCurrentTCB
  .bss.pxReadyTasksLists
-                0x000000002000427c       0x64 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001b97c       0x64 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xDelayedTaskList1
-                0x00000000200042e0       0x14 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001b9e0       0x14 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xDelayedTaskList2
-                0x00000000200042f4       0x14 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001b9f4       0x14 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.pxDelayedTaskList
-                0x0000000020004308        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba08        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x000000002000430c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba0c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xPendingReadyList
-                0x0000000020004310       0x14 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba10       0x14 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xTasksWaitingTermination
-                0x0000000020004324       0x14 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba24       0x14 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxDeletedTasksWaitingCleanUp
-                0x0000000020004338        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba38        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xSuspendedTaskList
-                0x000000002000433c       0x14 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba3c       0x14 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x0000000020004350        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba50        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xTickCount
-                0x0000000020004354        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba54        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxTopReadyPriority
-                0x0000000020004358        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba58        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xSchedulerRunning
-                0x000000002000435c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba5c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxPendedTicks
-                0x0000000020004360        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba60        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xYieldPending
-                0x0000000020004364        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba64        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xNumOfOverflows
-                0x0000000020004368        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba68        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxTaskNumber
-                0x000000002000436c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba6c        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xNextTaskUnblockTime
-                0x0000000020004370        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba70        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xIdleTaskHandle
-                0x0000000020004374        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba74        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.uxSchedulerSuspended
-                0x0000000020004378        0x4 ./amazon-freertos/FreeRTOS/tasks.o
+                0x000000002001ba78        0x4 ./amazon-freertos/FreeRTOS/tasks.o
  .bss.xActiveTimerList1
-                0x000000002000437c       0x14 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001ba7c       0x14 ./amazon-freertos/FreeRTOS/timers.o
  .bss.xActiveTimerList2
-                0x0000000020004390       0x14 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001ba90       0x14 ./amazon-freertos/FreeRTOS/timers.o
  .bss.pxCurrentTimerList
-                0x00000000200043a4        0x4 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001baa4        0x4 ./amazon-freertos/FreeRTOS/timers.o
  .bss.pxOverflowTimerList
-                0x00000000200043a8        0x4 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001baa8        0x4 ./amazon-freertos/FreeRTOS/timers.o
  .bss.xTimerQueue
-                0x00000000200043ac        0x4 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001baac        0x4 ./amazon-freertos/FreeRTOS/timers.o
  .bss.xTimerTaskHandle
-                0x00000000200043b0        0x4 ./amazon-freertos/FreeRTOS/timers.o
+                0x000000002001bab0        0x4 ./amazon-freertos/FreeRTOS/timers.o
  .bss.xLastTime.8001
-                0x00000000200043b4        0x4 ./amazon-freertos/FreeRTOS/timers.o
- .bss.__Ciob    0x00000000200043b8       0xb4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__ciob.o)
-                0x00000000200043b8                __Ciob
+                0x000000002001bab4        0x4 ./amazon-freertos/FreeRTOS/timers.o
+ .bss.__Ciob    0x000000002001bab8       0xb4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__ciob.o)
+                0x000000002001bab8                __Ciob
  .bss.__end_of_heap
-                0x000000002000446c        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
-                0x000000002000446c                __end_of_heap
- .bss.__heaps   0x0000000020004470        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
-                0x0000000020004470                __heaps
- .bss.errno     0x0000000020004474        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(errno.o)
-                0x0000000020004474                errno
- .bss.idx.7790  0x0000000020004478        0x2 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001bb6c        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
+                0x000000002001bb6c                __end_of_heap
+ .bss.__heaps   0x000000002001bb70        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
+                0x000000002001bb70                __heaps
+ .bss.errno     0x000000002001bb74        0x4 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(errno.o)
+                0x000000002001bb74                errno
+ .bss.idx.7790  0x000000002001bb78        0x2 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .bss.handle_of_last_logged_task
-                0x000000002000447a        0x1 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                0x000000002000447a                handle_of_last_logged_task
+                0x000000002001bb7a        0x1 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x000000002001bb7a                handle_of_last_logged_task
  .bss.ucMaxSysCallPriority
-                0x000000002000447b        0x1 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x000000002001bb7b        0x1 ./amazon-freertos/FreeRTOS/portable/port.o
  *(SORT_BY_ALIGNMENT(COMMON))
-                0x0000000020004480                . = ALIGN (0x8)
- *fill*         0x000000002000447c        0x4 
-                0x0000000020004480                _ebss = .
+                0x000000002001bb80                . = ALIGN (0x8)
+ *fill*         0x000000002001bb7c        0x4 
+                0x000000002001bb80                _ebss = .
                 [!provide]                        PROVIDE (end, .)
 
 .noinit_RAM2    0x000000001fff0000        0x0
@@ -3361,233 +3365,233 @@ END GROUP
  *(SORT_BY_ALIGNMENT(.noinit.$FLEX_RAM*))
                 0x0000000014000000                . = ALIGN (0x8)
 
-.noinit         0x0000000020004480        0x0
-                0x0000000020004480                _noinit = .
+.noinit         0x000000002001bb80        0x0
+                0x000000002001bb80                _noinit = .
  *(SORT_BY_ALIGNMENT(.noinit*))
-                0x0000000020004480                . = ALIGN (0x8)
-                0x0000000020004480                _end_noinit = .
+                0x000000002001bb80                . = ALIGN (0x8)
+                0x000000002001bb80                _end_noinit = .
                 0x0000000000001000                _HeapSize = 0x1000
 
-.heap           0x0000000020004480     0x1000
-                0x0000000020004480                _pvHeapStart = .
-                0x0000000020005480                . = (. + _HeapSize)
- *fill*         0x0000000020004480     0x1000 
-                0x0000000020005480                . = ALIGN (0x8)
-                0x0000000020005480                _pvHeapLimit = .
+.heap           0x000000002001bb80     0x1000
+                0x000000002001bb80                _pvHeapStart = .
+                0x000000002001cb80                . = (. + _HeapSize)
+ *fill*         0x000000002001bb80     0x1000 
+                0x000000002001cb80                . = ALIGN (0x8)
+                0x000000002001cb80                _pvHeapLimit = .
                 0x0000000000001000                _StackSize = 0x1000
 
 .heap2stackfill
-                0x0000000020005480     0x1000
-                0x0000000020006480                . = (. + _StackSize)
- *fill*         0x0000000020005480     0x1000 
+                0x000000002001cb80     0x1000
+                0x000000002001db80                . = (. + _StackSize)
+ *fill*         0x000000002001cb80     0x1000 
 
 .stack          0x000000002002f000        0x0
                 0x000000002002f000                _vStackBase = .
                 0x000000002002f000                . = ALIGN (0x8)
                 0x0000000020030000                _vStackTop = (. + _StackSize)
                 0x0000000000000000                _image_start = LOADADDR (.text)
-                0x0000000000007d40                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000000000007d40                _image_size = (_image_end - _image_start)
+                0x0000000000007ec0                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x0000000000007ec0                _image_size = (_image_end - _image_start)
 OUTPUT(TP4_SO2.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd57a
+.debug_info     0x0000000000000000     0xd795
  .debug_info    0x0000000000000000      0x8b0 ./startup/startup_mk64f12.o
- .debug_info    0x00000000000008b0      0x775 ./source/TP4_SO2.o
- .debug_info    0x0000000000001025       0x3b ./source/semihost_hardfault.o
- .debug_info    0x0000000000001060     0x19df ./drivers/fsl_uart.o
- .debug_info    0x0000000000002a3f       0xe8 ./board/clock_config.o
- .debug_info    0x0000000000002b27       0x3b ./board/peripherals.o
- .debug_info    0x0000000000002b62       0x3b ./board/pin_mux.o
- .debug_info    0x0000000000002b9d      0x649 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_info    0x00000000000031e6      0x94e ./amazon-freertos/portable/heap_4.o
- .debug_info    0x0000000000003b34      0x92e ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_info    0x0000000000004462     0x2289 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_info    0x00000000000066eb      0xaa4 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_info    0x000000000000718f      0x83f ./amazon-freertos/FreeRTOS/list.o
- .debug_info    0x00000000000079ce     0x1cf9 ./amazon-freertos/FreeRTOS/queue.o
- .debug_info    0x00000000000096c7     0x2579 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_info    0x000000000000bc40     0x1309 ./amazon-freertos/FreeRTOS/timers.o
- .debug_info    0x000000000000cf49      0x631 ./CMSIS/system_MK64F12.o
+ .debug_info    0x00000000000008b0      0x882 ./source/TP4_SO2.o
+ .debug_info    0x0000000000001132       0x3b ./source/semihost_hardfault.o
+ .debug_info    0x000000000000116d     0x19df ./drivers/fsl_uart.o
+ .debug_info    0x0000000000002b4c       0xe8 ./board/clock_config.o
+ .debug_info    0x0000000000002c34       0x3b ./board/peripherals.o
+ .debug_info    0x0000000000002c6f       0x3b ./board/pin_mux.o
+ .debug_info    0x0000000000002caa      0x667 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_info    0x0000000000003311      0x96c ./amazon-freertos/portable/heap_4.o
+ .debug_info    0x0000000000003c7d      0x94c ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_info    0x00000000000045c9     0x22a7 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_info    0x0000000000006870      0xac2 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_info    0x0000000000007332      0x85d ./amazon-freertos/FreeRTOS/list.o
+ .debug_info    0x0000000000007b8f     0x1d17 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_info    0x00000000000098a6     0x2597 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_info    0x000000000000be3d     0x1327 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_info    0x000000000000d164      0x631 ./CMSIS/system_MK64F12.o
 
-.debug_abbrev   0x0000000000000000     0x1da6
+.debug_abbrev   0x0000000000000000     0x1f41
  .debug_abbrev  0x0000000000000000      0x15c ./startup/startup_mk64f12.o
- .debug_abbrev  0x000000000000015c      0x14f ./source/TP4_SO2.o
- .debug_abbrev  0x00000000000002ab       0x2f ./source/semihost_hardfault.o
- .debug_abbrev  0x00000000000002da      0x303 ./drivers/fsl_uart.o
- .debug_abbrev  0x00000000000005dd       0x99 ./board/clock_config.o
- .debug_abbrev  0x0000000000000676       0x2f ./board/peripherals.o
- .debug_abbrev  0x00000000000006a5       0x2f ./board/pin_mux.o
- .debug_abbrev  0x00000000000006d4       0xf0 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_abbrev  0x00000000000007c4      0x23d ./amazon-freertos/portable/heap_4.o
- .debug_abbrev  0x0000000000000a01      0x1c9 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_abbrev  0x0000000000000bca      0x35a ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_abbrev  0x0000000000000f24      0x2a3 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_abbrev  0x00000000000011c7      0x170 ./amazon-freertos/FreeRTOS/list.o
- .debug_abbrev  0x0000000000001337      0x331 ./amazon-freertos/FreeRTOS/queue.o
- .debug_abbrev  0x0000000000001668      0x33d ./amazon-freertos/FreeRTOS/tasks.o
- .debug_abbrev  0x00000000000019a5      0x2ad ./amazon-freertos/FreeRTOS/timers.o
- .debug_abbrev  0x0000000000001c52      0x154 ./CMSIS/system_MK64F12.o
+ .debug_abbrev  0x000000000000015c      0x19d ./source/TP4_SO2.o
+ .debug_abbrev  0x00000000000002f9       0x2f ./source/semihost_hardfault.o
+ .debug_abbrev  0x0000000000000328      0x303 ./drivers/fsl_uart.o
+ .debug_abbrev  0x000000000000062b       0x99 ./board/clock_config.o
+ .debug_abbrev  0x00000000000006c4       0x2f ./board/peripherals.o
+ .debug_abbrev  0x00000000000006f3       0x2f ./board/pin_mux.o
+ .debug_abbrev  0x0000000000000722      0x115 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_abbrev  0x0000000000000837      0x262 ./amazon-freertos/portable/heap_4.o
+ .debug_abbrev  0x0000000000000a99      0x1ee ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_abbrev  0x0000000000000c87      0x37f ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_abbrev  0x0000000000001006      0x2c8 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_abbrev  0x00000000000012ce      0x195 ./amazon-freertos/FreeRTOS/list.o
+ .debug_abbrev  0x0000000000001463      0x356 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_abbrev  0x00000000000017b9      0x362 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_abbrev  0x0000000000001b1b      0x2d2 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_abbrev  0x0000000000001ded      0x154 ./CMSIS/system_MK64F12.o
 
-.debug_aranges  0x0000000000000000      0xd58
+.debug_aranges  0x0000000000000000      0xd68
  .debug_aranges
                 0x0000000000000000      0x330 ./startup/startup_mk64f12.o
  .debug_aranges
-                0x0000000000000330       0x28 ./source/TP4_SO2.o
+                0x0000000000000330       0x38 ./source/TP4_SO2.o
  .debug_aranges
-                0x0000000000000358       0x20 ./source/semihost_hardfault.o
+                0x0000000000000368       0x20 ./source/semihost_hardfault.o
  .debug_aranges
-                0x0000000000000378      0x170 ./drivers/fsl_uart.o
+                0x0000000000000388      0x170 ./drivers/fsl_uart.o
  .debug_aranges
-                0x00000000000004e8       0x20 ./board/clock_config.o
+                0x00000000000004f8       0x20 ./board/clock_config.o
  .debug_aranges
-                0x0000000000000508       0x20 ./board/peripherals.o
+                0x0000000000000518       0x20 ./board/peripherals.o
  .debug_aranges
-                0x0000000000000528       0x20 ./board/pin_mux.o
+                0x0000000000000538       0x20 ./board/pin_mux.o
  .debug_aranges
-                0x0000000000000548       0x20 ./amazon-freertos/portable/fsl_tickless_systick.o
+                0x0000000000000558       0x20 ./amazon-freertos/portable/fsl_tickless_systick.o
  .debug_aranges
-                0x0000000000000568       0x50 ./amazon-freertos/portable/heap_4.o
+                0x0000000000000578       0x50 ./amazon-freertos/portable/heap_4.o
  .debug_aranges
-                0x00000000000005b8       0xa8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                0x00000000000005c8       0xa8 ./amazon-freertos/TraceRecorder/trcKernelPort.o
  .debug_aranges
-                0x0000000000000660      0x208 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                0x0000000000000670      0x208 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
  .debug_aranges
-                0x0000000000000868       0x78 ./amazon-freertos/FreeRTOS/portable/port.o
+                0x0000000000000878       0x78 ./amazon-freertos/FreeRTOS/portable/port.o
  .debug_aranges
-                0x00000000000008e0       0x40 ./amazon-freertos/FreeRTOS/list.o
+                0x00000000000008f0       0x40 ./amazon-freertos/FreeRTOS/list.o
  .debug_aranges
-                0x0000000000000920      0x138 ./amazon-freertos/FreeRTOS/queue.o
+                0x0000000000000930      0x138 ./amazon-freertos/FreeRTOS/queue.o
  .debug_aranges
-                0x0000000000000a58      0x1f8 ./amazon-freertos/FreeRTOS/tasks.o
+                0x0000000000000a68      0x1f8 ./amazon-freertos/FreeRTOS/tasks.o
  .debug_aranges
-                0x0000000000000c50       0xd8 ./amazon-freertos/FreeRTOS/timers.o
+                0x0000000000000c60       0xd8 ./amazon-freertos/FreeRTOS/timers.o
  .debug_aranges
-                0x0000000000000d28       0x30 ./CMSIS/system_MK64F12.o
+                0x0000000000000d38       0x30 ./CMSIS/system_MK64F12.o
 
-.debug_ranges   0x0000000000000000      0xc48
+.debug_ranges   0x0000000000000000      0xc58
  .debug_ranges  0x0000000000000000      0x320 ./startup/startup_mk64f12.o
- .debug_ranges  0x0000000000000320       0x18 ./source/TP4_SO2.o
- .debug_ranges  0x0000000000000338       0x10 ./source/semihost_hardfault.o
- .debug_ranges  0x0000000000000348      0x160 ./drivers/fsl_uart.o
- .debug_ranges  0x00000000000004a8       0x10 ./board/clock_config.o
- .debug_ranges  0x00000000000004b8       0x10 ./board/peripherals.o
- .debug_ranges  0x00000000000004c8       0x10 ./board/pin_mux.o
- .debug_ranges  0x00000000000004d8       0x10 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_ranges  0x00000000000004e8       0x40 ./amazon-freertos/portable/heap_4.o
- .debug_ranges  0x0000000000000528       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_ranges  0x00000000000005c0      0x1f8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_ranges  0x00000000000007b8       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_ranges  0x0000000000000820       0x30 ./amazon-freertos/FreeRTOS/list.o
- .debug_ranges  0x0000000000000850      0x128 ./amazon-freertos/FreeRTOS/queue.o
- .debug_ranges  0x0000000000000978      0x1e8 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_ranges  0x0000000000000b60       0xc8 ./amazon-freertos/FreeRTOS/timers.o
- .debug_ranges  0x0000000000000c28       0x20 ./CMSIS/system_MK64F12.o
+ .debug_ranges  0x0000000000000320       0x28 ./source/TP4_SO2.o
+ .debug_ranges  0x0000000000000348       0x10 ./source/semihost_hardfault.o
+ .debug_ranges  0x0000000000000358      0x160 ./drivers/fsl_uart.o
+ .debug_ranges  0x00000000000004b8       0x10 ./board/clock_config.o
+ .debug_ranges  0x00000000000004c8       0x10 ./board/peripherals.o
+ .debug_ranges  0x00000000000004d8       0x10 ./board/pin_mux.o
+ .debug_ranges  0x00000000000004e8       0x10 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_ranges  0x00000000000004f8       0x40 ./amazon-freertos/portable/heap_4.o
+ .debug_ranges  0x0000000000000538       0x98 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_ranges  0x00000000000005d0      0x1f8 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_ranges  0x00000000000007c8       0x68 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_ranges  0x0000000000000830       0x30 ./amazon-freertos/FreeRTOS/list.o
+ .debug_ranges  0x0000000000000860      0x128 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_ranges  0x0000000000000988      0x1e8 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_ranges  0x0000000000000b70       0xc8 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_ranges  0x0000000000000c38       0x20 ./CMSIS/system_MK64F12.o
 
-.debug_macro    0x0000000000000000    0x12dd6
+.debug_macro    0x0000000000000000    0x12df0
  .debug_macro   0x0000000000000000       0x29 ./startup/startup_mk64f12.o
  .debug_macro   0x0000000000000029      0xa9c ./startup/startup_mk64f12.o
- .debug_macro   0x0000000000000ac5      0x192 ./source/TP4_SO2.o
- .debug_macro   0x0000000000000c57       0x10 ./source/TP4_SO2.o
- .debug_macro   0x0000000000000c67      0x12d ./source/TP4_SO2.o
- .debug_macro   0x0000000000000d94       0xd8 ./source/TP4_SO2.o
- .debug_macro   0x0000000000000e6c       0x10 ./source/TP4_SO2.o
- .debug_macro   0x0000000000000e7c       0x5c ./source/TP4_SO2.o
- .debug_macro   0x0000000000000ed8      0x5b2 ./source/TP4_SO2.o
- .debug_macro   0x000000000000148a       0x1c ./source/TP4_SO2.o
- .debug_macro   0x00000000000014a6       0x22 ./source/TP4_SO2.o
- .debug_macro   0x00000000000014c8       0xdf ./source/TP4_SO2.o
- .debug_macro   0x00000000000015a7      0xecf ./source/TP4_SO2.o
- .debug_macro   0x0000000000002476       0x48 ./source/TP4_SO2.o
- .debug_macro   0x00000000000024be     0xe07b ./source/TP4_SO2.o
- .debug_macro   0x0000000000010539       0x10 ./source/TP4_SO2.o
- .debug_macro   0x0000000000010549      0x189 ./source/TP4_SO2.o
- .debug_macro   0x00000000000106d2      0x13f ./source/TP4_SO2.o
- .debug_macro   0x0000000000010811       0x6a ./source/TP4_SO2.o
- .debug_macro   0x000000000001087b       0xdd ./source/TP4_SO2.o
- .debug_macro   0x0000000000010958       0x88 ./source/TP4_SO2.o
- .debug_macro   0x00000000000109e0      0x98d ./source/TP4_SO2.o
- .debug_macro   0x000000000001136d      0x1f0 ./source/TP4_SO2.o
- .debug_macro   0x000000000001155d      0x15a ./source/TP4_SO2.o
- .debug_macro   0x00000000000116b7       0xdd ./source/TP4_SO2.o
- .debug_macro   0x0000000000011794       0x10 ./source/TP4_SO2.o
- .debug_macro   0x00000000000117a4       0x1f ./source/TP4_SO2.o
- .debug_macro   0x00000000000117c3      0x2ce ./source/TP4_SO2.o
- .debug_macro   0x0000000000011a91       0xb5 ./source/TP4_SO2.o
- .debug_macro   0x0000000000011b46       0x8c ./source/TP4_SO2.o
- .debug_macro   0x0000000000011bd2       0x86 ./source/TP4_SO2.o
- .debug_macro   0x0000000000011c58       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x0000000000011c69      0x10f ./drivers/fsl_uart.o
- .debug_macro   0x0000000000011d78       0x90 ./board/clock_config.o
- .debug_macro   0x0000000000011e08       0x1b ./board/peripherals.o
- .debug_macro   0x0000000000011e23       0x1b ./board/pin_mux.o
- .debug_macro   0x0000000000011e3e      0x158 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_macro   0x0000000000011f96       0x7c ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_macro   0x0000000000012012      0x17b ./amazon-freertos/portable/heap_4.o
- .debug_macro   0x000000000001218d       0x28 ./amazon-freertos/portable/heap_4.o
- .debug_macro   0x00000000000121b5      0x158 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_macro   0x000000000001230d      0x162 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_macro   0x000000000001246f       0x1c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_macro   0x000000000001248b      0x1d0 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_macro   0x000000000001265b      0x154 ./amazon-freertos/FreeRTOS/list.o
- .debug_macro   0x00000000000127af      0x1bd ./amazon-freertos/FreeRTOS/queue.o
- .debug_macro   0x000000000001296c      0x22b ./amazon-freertos/FreeRTOS/tasks.o
- .debug_macro   0x0000000000012b97       0x10 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_macro   0x0000000000012ba7      0x197 ./amazon-freertos/FreeRTOS/timers.o
- .debug_macro   0x0000000000012d3e       0x98 ./CMSIS/system_MK64F12.o
+ .debug_macro   0x0000000000000ac5      0x1ac ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000c71       0x10 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000c81      0x12d ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000dae       0xd8 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000e86       0x10 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000e96       0x5c ./source/TP4_SO2.o
+ .debug_macro   0x0000000000000ef2      0x5b2 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000014a4       0x1c ./source/TP4_SO2.o
+ .debug_macro   0x00000000000014c0       0x22 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000014e2       0xdf ./source/TP4_SO2.o
+ .debug_macro   0x00000000000015c1      0xecf ./source/TP4_SO2.o
+ .debug_macro   0x0000000000002490       0x48 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000024d8     0xe07b ./source/TP4_SO2.o
+ .debug_macro   0x0000000000010553       0x10 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000010563      0x189 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000106ec      0x13f ./source/TP4_SO2.o
+ .debug_macro   0x000000000001082b       0x6a ./source/TP4_SO2.o
+ .debug_macro   0x0000000000010895       0xdd ./source/TP4_SO2.o
+ .debug_macro   0x0000000000010972       0x88 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000109fa      0x98d ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011387      0x1f0 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011577      0x15a ./source/TP4_SO2.o
+ .debug_macro   0x00000000000116d1       0xdd ./source/TP4_SO2.o
+ .debug_macro   0x00000000000117ae       0x10 ./source/TP4_SO2.o
+ .debug_macro   0x00000000000117be       0x1f ./source/TP4_SO2.o
+ .debug_macro   0x00000000000117dd      0x2ce ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011aab       0xb5 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011b60       0x8c ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011bec       0x86 ./source/TP4_SO2.o
+ .debug_macro   0x0000000000011c72       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x0000000000011c83      0x10f ./drivers/fsl_uart.o
+ .debug_macro   0x0000000000011d92       0x90 ./board/clock_config.o
+ .debug_macro   0x0000000000011e22       0x1b ./board/peripherals.o
+ .debug_macro   0x0000000000011e3d       0x1b ./board/pin_mux.o
+ .debug_macro   0x0000000000011e58      0x158 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_macro   0x0000000000011fb0       0x7c ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_macro   0x000000000001202c      0x17b ./amazon-freertos/portable/heap_4.o
+ .debug_macro   0x00000000000121a7       0x28 ./amazon-freertos/portable/heap_4.o
+ .debug_macro   0x00000000000121cf      0x158 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_macro   0x0000000000012327      0x162 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_macro   0x0000000000012489       0x1c ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_macro   0x00000000000124a5      0x1d0 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_macro   0x0000000000012675      0x154 ./amazon-freertos/FreeRTOS/list.o
+ .debug_macro   0x00000000000127c9      0x1bd ./amazon-freertos/FreeRTOS/queue.o
+ .debug_macro   0x0000000000012986      0x22b ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000012bb1       0x10 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000012bc1      0x197 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_macro   0x0000000000012d58       0x98 ./CMSIS/system_MK64F12.o
 
-.debug_line     0x0000000000000000     0x65b2
+.debug_line     0x0000000000000000     0x65ef
  .debug_line    0x0000000000000000      0x6d4 ./startup/startup_mk64f12.o
- .debug_line    0x00000000000006d4      0x37f ./source/TP4_SO2.o
- .debug_line    0x0000000000000a53       0x54 ./source/semihost_hardfault.o
- .debug_line    0x0000000000000aa7      0x9f6 ./drivers/fsl_uart.o
- .debug_line    0x000000000000149d      0x175 ./board/clock_config.o
- .debug_line    0x0000000000001612       0x58 ./board/peripherals.o
- .debug_line    0x000000000000166a       0x50 ./board/pin_mux.o
- .debug_line    0x00000000000016ba      0x347 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_line    0x0000000000001a01      0x46f ./amazon-freertos/portable/heap_4.o
- .debug_line    0x0000000000001e70      0x4a4 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_line    0x0000000000002314      0xecb ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_line    0x00000000000031df      0x53e ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_line    0x000000000000371d      0x38c ./amazon-freertos/FreeRTOS/list.o
- .debug_line    0x0000000000003aa9      0xf88 ./amazon-freertos/FreeRTOS/queue.o
- .debug_line    0x0000000000004a31     0x127d ./amazon-freertos/FreeRTOS/tasks.o
- .debug_line    0x0000000000005cae      0x6ff ./amazon-freertos/FreeRTOS/timers.o
- .debug_line    0x00000000000063ad      0x205 ./CMSIS/system_MK64F12.o
+ .debug_line    0x00000000000006d4      0x3bc ./source/TP4_SO2.o
+ .debug_line    0x0000000000000a90       0x54 ./source/semihost_hardfault.o
+ .debug_line    0x0000000000000ae4      0x9f6 ./drivers/fsl_uart.o
+ .debug_line    0x00000000000014da      0x175 ./board/clock_config.o
+ .debug_line    0x000000000000164f       0x58 ./board/peripherals.o
+ .debug_line    0x00000000000016a7       0x50 ./board/pin_mux.o
+ .debug_line    0x00000000000016f7      0x347 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_line    0x0000000000001a3e      0x46f ./amazon-freertos/portable/heap_4.o
+ .debug_line    0x0000000000001ead      0x4a4 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_line    0x0000000000002351      0xecb ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_line    0x000000000000321c      0x53e ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_line    0x000000000000375a      0x38c ./amazon-freertos/FreeRTOS/list.o
+ .debug_line    0x0000000000003ae6      0xf88 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_line    0x0000000000004a6e     0x127d ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_line    0x0000000000005ceb      0x6ff ./amazon-freertos/FreeRTOS/timers.o
+ .debug_line    0x00000000000063ea      0x205 ./CMSIS/system_MK64F12.o
 
-.debug_str      0x0000000000000000    0x8e150
+.debug_str      0x0000000000000000    0x8e1af
  .debug_str     0x0000000000000000     0x35d1 ./startup/startup_mk64f12.o
                                        0x3654 (size before relaxing)
- .debug_str     0x00000000000035d1    0x7c97d ./source/TP4_SO2.o
-                                      0x7f81d (size before relaxing)
- .debug_str     0x000000000007ff4e       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x00000000000035d1    0x7c9fa ./source/TP4_SO2.o
+                                      0x7f8d5 (size before relaxing)
+ .debug_str     0x000000000007ffcb       0x1f ./source/semihost_hardfault.o
                                        0x2de5 (size before relaxing)
- .debug_str     0x000000000007ff6d     0x96a3 ./drivers/fsl_uart.o
+ .debug_str     0x000000000007ffea     0x968e ./drivers/fsl_uart.o
                                       0x7a88b (size before relaxing)
- .debug_str     0x0000000000089610       0x2d ./board/clock_config.o
+ .debug_str     0x0000000000089678       0x2d ./board/clock_config.o
                                       0x7116a (size before relaxing)
- .debug_str     0x000000000008963d       0x31 ./board/peripherals.o
+ .debug_str     0x00000000000896a5       0x31 ./board/peripherals.o
                                        0x2df6 (size before relaxing)
- .debug_str     0x000000000008966e       0x26 ./board/pin_mux.o
+ .debug_str     0x00000000000896d6       0x26 ./board/pin_mux.o
                                        0x2de7 (size before relaxing)
- .debug_str     0x0000000000089694      0x3dd ./amazon-freertos/portable/fsl_tickless_systick.o
-                                      0x7f104 (size before relaxing)
- .debug_str     0x0000000000089a71      0x2ad ./amazon-freertos/portable/heap_4.o
-                                      0x7f050 (size before relaxing)
- .debug_str     0x0000000000089d1e      0x228 ./amazon-freertos/TraceRecorder/trcKernelPort.o
-                                      0x7f686 (size before relaxing)
- .debug_str     0x0000000000089f46     0x1087 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
-                                      0x7f10f (size before relaxing)
- .debug_str     0x000000000008afcd      0x58a ./amazon-freertos/FreeRTOS/portable/port.o
-                                      0x7f6ac (size before relaxing)
- .debug_str     0x000000000008b557      0x12e ./amazon-freertos/FreeRTOS/list.o
-                                      0x7e950 (size before relaxing)
- .debug_str     0x000000000008b685      0x829 ./amazon-freertos/FreeRTOS/queue.o
-                                      0x7fee9 (size before relaxing)
- .debug_str     0x000000000008beae     0x1bcc ./amazon-freertos/FreeRTOS/tasks.o
-                                      0x80cdb (size before relaxing)
- .debug_str     0x000000000008da7a      0x50a ./amazon-freertos/FreeRTOS/timers.o
-                                      0x80372 (size before relaxing)
- .debug_str     0x000000000008df84      0x1cc ./CMSIS/system_MK64F12.o
+ .debug_str     0x00000000000896fc      0x3dd ./amazon-freertos/portable/fsl_tickless_systick.o
+                                      0x7f105 (size before relaxing)
+ .debug_str     0x0000000000089ad9      0x2ad ./amazon-freertos/portable/heap_4.o
+                                      0x7f051 (size before relaxing)
+ .debug_str     0x0000000000089d86      0x228 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+                                      0x7f687 (size before relaxing)
+ .debug_str     0x0000000000089fae     0x1087 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+                                      0x7f110 (size before relaxing)
+ .debug_str     0x000000000008b035      0x58a ./amazon-freertos/FreeRTOS/portable/port.o
+                                      0x7f6ad (size before relaxing)
+ .debug_str     0x000000000008b5bf      0x12e ./amazon-freertos/FreeRTOS/list.o
+                                      0x7e951 (size before relaxing)
+ .debug_str     0x000000000008b6ed      0x829 ./amazon-freertos/FreeRTOS/queue.o
+                                      0x7feea (size before relaxing)
+ .debug_str     0x000000000008bf16     0x1bcc ./amazon-freertos/FreeRTOS/tasks.o
+                                      0x80cdc (size before relaxing)
+ .debug_str     0x000000000008dae2      0x501 ./amazon-freertos/FreeRTOS/timers.o
+                                      0x80373 (size before relaxing)
+ .debug_str     0x000000000008dfe3      0x1cc ./CMSIS/system_MK64F12.o
                                       0x77e2a (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
@@ -3622,6 +3626,7 @@ OUTPUT(TP4_SO2.axf elf32-littlearm)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(initio.o)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(printf.o)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(setvbuf.o)
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
  .comment       0x000000000000007e       0x7f /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_sbrk.o)
@@ -3698,57 +3703,59 @@ OUTPUT(TP4_SO2.axf elf32-littlearm)
  .ARM.attributes
                 0x000000000000069a       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(setvbuf.o)
  .ARM.attributes
-                0x00000000000006d3       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
+                0x00000000000006d3       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strcpy.o)
  .ARM.attributes
-                0x000000000000070c       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
+                0x000000000000070c       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(strlen.o)
  .ARM.attributes
-                0x0000000000000745       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_sbrk.o)
+                0x0000000000000745       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(__init_alloc.o)
  .ARM.attributes
-                0x000000000000077e       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fdopen.o)
+                0x000000000000077e       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_sbrk.o)
  .ARM.attributes
-                0x00000000000007b7       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(errno.o)
+                0x00000000000007b7       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_fdopen.o)
  .ARM.attributes
-                0x00000000000007f0       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fclose.o)
+                0x00000000000007f0       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(errno.o)
  .ARM.attributes
-                0x0000000000000829       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fflush.o)
+                0x0000000000000829       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fclose.o)
  .ARM.attributes
-                0x0000000000000862       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(remove.o)
+                0x0000000000000862       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(fflush.o)
  .ARM.attributes
-                0x000000000000089b       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_check_heap.o)
+                0x000000000000089b       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(remove.o)
  .ARM.attributes
-                0x00000000000008d4       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_do_fflush.o)
+                0x00000000000008d4       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_cr_check_heap.o)
  .ARM.attributes
-                0x000000000000090d       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
+                0x000000000000090d       0x39 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_c.a(_do_fflush.o)
  .ARM.attributes
-                0x0000000000000932       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_close.o)
+                0x0000000000000946       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libcr_eabihelpers.a(memcpy.o)
  .ARM.attributes
-                0x0000000000000957       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_flen.o)
+                0x000000000000096b       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_close.o)
  .ARM.attributes
-                0x000000000000097c       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_istty.o)
+                0x0000000000000990       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_flen.o)
  .ARM.attributes
-                0x00000000000009a1       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_remove.o)
+                0x00000000000009b5       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_istty.o)
  .ARM.attributes
-                0x00000000000009c6       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_seek.o)
+                0x00000000000009da       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_remove.o)
  .ARM.attributes
-                0x00000000000009eb       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_tmpnam.o)
+                0x00000000000009ff       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_seek.o)
  .ARM.attributes
-                0x0000000000000a10       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_write.o)
+                0x0000000000000a24       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_tmpnam.o)
+ .ARM.attributes
+                0x0000000000000a49       0x25 /usr/local/mcuxpresso-ide/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libcr_semihost_nf.a(__sys_write.o)
 
-.debug_frame    0x0000000000000000     0x3100
+.debug_frame    0x0000000000000000     0x3140
  .debug_frame   0x0000000000000000      0x904 ./startup/startup_mk64f12.o
- .debug_frame   0x0000000000000904       0x50 ./source/TP4_SO2.o
- .debug_frame   0x0000000000000954       0x20 ./source/semihost_hardfault.o
- .debug_frame   0x0000000000000974      0x5ec ./drivers/fsl_uart.o
- .debug_frame   0x0000000000000f60       0x2c ./board/clock_config.o
- .debug_frame   0x0000000000000f8c       0x30 ./board/peripherals.o
- .debug_frame   0x0000000000000fbc       0x30 ./board/pin_mux.o
- .debug_frame   0x0000000000000fec       0x30 ./amazon-freertos/portable/fsl_tickless_systick.o
- .debug_frame   0x000000000000101c      0x108 ./amazon-freertos/portable/heap_4.o
- .debug_frame   0x0000000000001124      0x284 ./amazon-freertos/TraceRecorder/trcKernelPort.o
- .debug_frame   0x00000000000013a8      0x8c4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
- .debug_frame   0x0000000000001c6c      0x188 ./amazon-freertos/FreeRTOS/portable/port.o
- .debug_frame   0x0000000000001df4       0xd8 ./amazon-freertos/FreeRTOS/list.o
- .debug_frame   0x0000000000001ecc      0x588 ./amazon-freertos/FreeRTOS/queue.o
- .debug_frame   0x0000000000002454      0x8b0 ./amazon-freertos/FreeRTOS/tasks.o
- .debug_frame   0x0000000000002d04      0x388 ./amazon-freertos/FreeRTOS/timers.o
- .debug_frame   0x000000000000308c       0x74 ./CMSIS/system_MK64F12.o
+ .debug_frame   0x0000000000000904       0x90 ./source/TP4_SO2.o
+ .debug_frame   0x0000000000000994       0x20 ./source/semihost_hardfault.o
+ .debug_frame   0x00000000000009b4      0x5ec ./drivers/fsl_uart.o
+ .debug_frame   0x0000000000000fa0       0x2c ./board/clock_config.o
+ .debug_frame   0x0000000000000fcc       0x30 ./board/peripherals.o
+ .debug_frame   0x0000000000000ffc       0x30 ./board/pin_mux.o
+ .debug_frame   0x000000000000102c       0x30 ./amazon-freertos/portable/fsl_tickless_systick.o
+ .debug_frame   0x000000000000105c      0x108 ./amazon-freertos/portable/heap_4.o
+ .debug_frame   0x0000000000001164      0x284 ./amazon-freertos/TraceRecorder/trcKernelPort.o
+ .debug_frame   0x00000000000013e8      0x8c4 ./amazon-freertos/TraceRecorder/trcSnapshotRecorder.o
+ .debug_frame   0x0000000000001cac      0x188 ./amazon-freertos/FreeRTOS/portable/port.o
+ .debug_frame   0x0000000000001e34       0xd8 ./amazon-freertos/FreeRTOS/list.o
+ .debug_frame   0x0000000000001f0c      0x588 ./amazon-freertos/FreeRTOS/queue.o
+ .debug_frame   0x0000000000002494      0x8b0 ./amazon-freertos/FreeRTOS/tasks.o
+ .debug_frame   0x0000000000002d44      0x388 ./amazon-freertos/FreeRTOS/timers.o
+ .debug_frame   0x00000000000030cc       0x74 ./CMSIS/system_MK64F12.o

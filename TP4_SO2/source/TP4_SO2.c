@@ -38,13 +38,22 @@
 #include "pin_mux.h"
 #include "clock_config.h"
 #include "MK64F12.h"
-
+#include "string.h"
 /* TODO: insert other include files here. */
 /*Se incluye FreeRTOS.h para poder crear tareas y ejecutar el Scheduler*/
 #include "FreeRTOS.h"
 #include "task.h"
+/*Necesario para la comunicación entre dos tareas.*/
 #include "queue.h"
 /* TODO: insert other definitions and declarations here. */
+typedef struct A_Message
+{
+ char ucMessageID;
+ char ucData[ 20 ];
+} AMessage;
+
+#define QUEUE_LENGTH 10
+#define QUEUE_ITEM_SIZE sizeof(AMessage)
 
 /*Definimos una función usando la convención*/
 void vPrint(void *pvParameter){
@@ -53,6 +62,35 @@ void vPrint(void *pvParameter){
         vTaskDelay(500);
     }
 }
+
+void vProductor(void *pvParameter){
+    QueueHandle_t xQueue;
+    xQueue = (QueueHandle_t) pvParameter;
+    AMessage xMessage;
+    for(;;){
+		strcpy(xMessage.ucData, "Hola Mundo!");
+		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS )
+		{
+			printf("No se pudo escribir en la cola\n");
+		}
+		printf("Guardo en la cola: %s\n", xMessage.ucData);
+		vTaskDelay(4000/portTICK_RATE_MS);
+    }
+}
+
+void vConsumidor(void *pvParameter){
+    QueueHandle_t xQueue;
+    xQueue = (QueueHandle_t) pvParameter;
+    AMessage xMessage;
+    for(;;){
+		if( xQueueReceive( xQueue, &xMessage, portMAX_DELAY ) != pdPASS ){
+			printf("No se leyó nada de la cola\n");
+		}
+		printf("Leí de la cola el mensaje: %s\n",xMessage.ucData);
+    }
+
+}
+
 /*
  * @brief   Application entry point.
  */
@@ -62,10 +100,19 @@ int main(void) {
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
     /*No se puede correr el programa si no está esta línea.
-     El programa finaliza en xTaskCreate()*/
+     El programa finaliza en xTaskCreate() o en la creación de la cola.
+     Debe ser la primer línea.*/
     vTraceEnable(TRC_START);
-    xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);
-    //printf("Hello World\n");
+
+    /*Creamos una cola*/
+    QueueHandle_t xQueue;
+    xQueue = xQueueCreate( QUEUE_LENGTH, QUEUE_ITEM_SIZE );
+
+    /*No agreamos esta tarea*/
+    /*xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);*/
+    xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);
+    xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 1, NULL);
+
     vTaskStartScheduler();
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
