@@ -95,18 +95,19 @@ void vTeclado (void *pvParameter){
 	xQueue = (QueueHandle_t) pvParameter;
 	AMessage xMessage;
 	TickType_t pxDelay;
-	char tipeo;
+	char letra;
 	int i;
+	int longitud;
 
 	for(;;){
 		do {
-			tipeo = aleatorio (123);
-		} while(tipeo < 97);
-		pxDelay = rand()%1001;
-		if(pxDelay < 100){
-			pxDelay += 100;
+			letra = aleatorio (123);
+		} while(letra < 97);
+		pxDelay = rand()%5000;
+		if(pxDelay < 1000){
+			pxDelay += 1000;
 		}
-		printf("%c\n",tipeo);
+		printf("%c\n",letra);
 		vTaskDelay(pxDelay/portTICK_RATE_MS);
 	}
 }
