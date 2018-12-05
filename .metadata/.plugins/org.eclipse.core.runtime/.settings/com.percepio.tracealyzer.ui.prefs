@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+rtosType=FreeRTOS
+sameFileHandling=Do nothing
+traceBufferAddressExpression=RecorderDataPtr
+traceBufferSizeExpression=sizeof(*RecorderDataPtr)
+tracealyzerPath=/home/miguel/Downloads/Tracealyzer-4.2.6-linux64/Tracealyzer.exe
+tracealyzerPreviousPaths=/usr/bin;/home/miguel/Downloads/Tracealyzer-4.2.6-linux64/Tracealyzer.exe

@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2 JLink Release,org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2 JLink Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ JLink\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ JLink\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ LinkServer\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:TP4_SO2\ LinkServer\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

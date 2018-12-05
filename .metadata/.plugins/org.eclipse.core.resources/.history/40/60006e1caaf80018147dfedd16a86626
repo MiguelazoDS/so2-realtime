@@ -1,0 +1,221 @@
+/*
+ * Copyright (c) 2013 - 2016, Freescale Semiconductor, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ *
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of Freescale Semiconductor, Inc. nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/**
+ * This is template for main module created by New Kinetis SDK 2.x Project Wizard. Enjoy!
+ **/
+
+#include <string.h>
+#include <stdlib.h>
+
+//#include "stdio.h"
+#include "printf-stdarg.h"
+
+
+#include "board.h"
+#include "pin_mux.h"
+#include "clock_config.h"
+/*#include "fsl_debug_console.h"*/
+
+/* FreeRTOS kernel includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+
+#include "fsl_port.h"
+#include "fsl_device_registers.h"
+#include "fsl_debug_console.h"
+#include "heap_4.c"
+#define task_PRIORITY (configMAX_PRIORITIES - 1)
+#define CANTIDAD_letras 3
+#define config_STACK_SIZE 512
+
+static void vAPeriodicTask(void *pvParameters);
+static void vPeriodicTask(void *pvParameters);
+static void vHandlerTask(void *pvParameters);
+void hard_init(void );
+
+struct mensaje{
+	int cola;
+	char * mensaje;
+};
+
+
+
+int main(void) {
+	/* Init board*/
+	BOARD_InitPins();
+	BOARD_BootClockRUN();
+	BOARD_InitDebugConsole();
+	QueueHandle_t xQueuec;
+
+
+
+	// vTracePrint(1, "Hello World!");
+	// vTraceEnable(TRC_INIT);
+
+    hard_init();
+
+
+	xQueuec = xQueueCreate(CANTIDAD_letras, sizeof(struct mensaje));
+	/* se crean dos tareas una periodica y otra aperiodica con la interrupcion. */
+	// vTraceEnable(TRC_START);
+	 vTraceEnable(TRC_INIT);
+	xTaskCreate(vHandlerTask, "Handler", config_STACK_SIZE, xQueuec, task_PRIORITY, NULL);// handler de la uart y recepcion de los datos  a Tx
+
+	xTaskCreate(vPeriodicTask, "Temperatura", config_STACK_SIZE, xQueuec, task_PRIORITY, NULL);// envia dato de la temperatura desde el valor de la structura
+	xTaskCreate(vAPeriodicTask, "Pulsador", config_STACK_SIZE, xQueuec, task_PRIORITY, NULL);// envia dato del pulsador desde el valor de la structura
+
+
+	vTaskStartScheduler(); /* se inicia scheduler las tareas creadas comiencen a ejecutarse. */
+
+	vTaskResume(vPeriodicTask);
+	vTaskResume(vAPeriodicTask);
+
+
+	for(;;) { /* Infinite loop to avoid leaving the main function */
+		__asm("NOP"); /* something to use as a breakpoint stop while looping */
+	}
+}
+
+
+void vPeriodicTask(void *pvParameters) {
+	struct mensaje enviar;
+	uint8_t temperatura;
+	const portTickType xTicksToWait = 100 / portTICK_RATE_MS;
+	QueueHandle_t xQueuec;
+	xQueuec = (QueueHandle_t) pvParameters;
+
+	for (;;) {
+
+		temperatura = ((rand() % (((34) + 1) - (20))) + (34));
+		enviar.mensaje = (char*)pvPortMalloc(sizeof(char));
+		*enviar.mensaje = (char) temperatura;
+		xQueueSend(xQueuec, ( void * ) &enviar,  xTicksToWait);
+		enviar.cola = 1;
+		enviar.mensaje = NULL;
+
+		vTaskDelay( 1000 );
+	}
+}
+
+
+void vAPeriodicTask(void *pvParameters) {
+	int longitud;
+	int i;
+	char letras[100];
+	struct mensaje enviar;
+	int pulsar;
+	QueueHandle_t xQueuec;
+
+	xQueuec = (QueueHandle_t) pvParameters;
+
+	pulsar = 0;
+	for (;;) {
+
+		if (GPIO_ReadPinInput(BOARD_SW3_GPIO,BOARD_SW3_GPIO_PIN) == 0){
+			if(pulsar == 0){
+
+				longitud = rand() % (60);
+				for(i=0; i<longitud; i++){
+					letras[i] = 'a' + (rand() % 26);
+
+				}
+				letras[i]='\0';
+
+				enviar.mensaje = (char*)pvPortMalloc(sizeof(char)*(longitud+1));
+				strcpy (enviar.mensaje,letras);
+				enviar.cola = 0;
+				xQueueSend(xQueuec, ( void * ) &enviar, ( TickType_t ) portMAX_DELAY);
+				pulsar = 1;
+
+				enviar.mensaje = NULL;
+			}
+
+		}
+		else{
+			pulsar = 0;
+		}
+		vTaskDelay( 100 );
+	}
+
+
+}
+
+void vHandlerTask(void *pvParameters) {
+	struct mensaje recibido;
+	uint8_t temperatura;
+	QueueHandle_t xQueuec;
+
+	xQueuec = (QueueHandle_t) pvParameters;
+
+	for (;;) {
+
+		xQueueReceive(xQueuec, &recibido, ( TickType_t ) portMAX_DELAY);
+
+		 if( recibido.cola==0){
+			 printf("Pulsador = %s\r\n\n", recibido.mensaje);
+
+		  }else{
+		     temperatura = (uint8_t) *recibido.mensaje;
+		     printf("Temperatura = %u\r\n\n", temperatura);
+		        }
+		vPortFree(recibido.mensaje);
+		recibido.mensaje = NULL;
+
+
+	}
+}
+
+
+// inicio de pines gpio
+
+void hard_init(void ) {
+
+
+
+	// Enable the clock to the PORT
+	CLOCK_EnableClock(kCLOCK_PortB);
+	CLOCK_EnableClock(kCLOCK_PortE);
+	CLOCK_EnableClock(kCLOCK_PortA);
+
+	// Setup  pin as GPIO
+	PORT_SetPinMux(BOARD_LED_RED_GPIO_PORT, BOARD_LED_RED_GPIO_PIN, kPORT_MuxAsGpio);
+	PORT_SetPinMux(BOARD_LED_GREEN_GPIO_PORT, BOARD_LED_GREEN_GPIO_PIN, kPORT_MuxAsGpio);
+	PORT_SetPinMux(BOARD_LED_BLUE_GPIO_PORT, BOARD_LED_BLUE_GPIO_PIN, kPORT_MuxAsGpio);
+	PORT_SetPinMux(BOARD_SW3_PORT, BOARD_SW3_GPIO_PIN, kPORT_MuxAsGpio);
+
+	//initialise the RGB to on/off condition
+	LED_RED_INIT(LOGIC_LED_OFF);
+	LED_GREEN_INIT(LOGIC_LED_OFF);
+	LED_RED_OFF();
+	LED_GREEN_ON();
+}

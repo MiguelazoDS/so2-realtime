@@ -1,0 +1,220 @@
+/*
+ * Copyright (c) 2013 - 2015, Freescale Semiconductor, Inc.
+ * Copyright 2016-2017 NXP
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ *
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+
+/* FreeRTOS kernel includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+#include "semphr.h"
+
+/* Freescale includes. */
+#include "fsl_device_registers.h"
+//#include "fsl_debug_console.h"
+#include "board.h"
+
+//#include "trcBase.h"
+
+#include "pin_mux.h"
+#include "clock_config.h"
+
+/* Interrupt includes. */
+//#include "fsl_debug_console.h"
+//#include "fsl_port.h"
+//#include "fsl_gpio.h"
+#include "fsl_common.h"
+
+
+/* Mine includes. */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+
+#define APP_SYSVIEW_APP_NAME "FRDMK64F System Viewer Demo"
+#define APP_SYSVIEW_DEVICE_NAME "Cortex-M4"
+#define APP_SYSVIEW_RAM_BASE (0x1FFF0000)
+
+/* Interrupt */
+#define BOARD_SW_GPIO BOARD_SW3_GPIO
+#define BOARD_SW_PORT BOARD_SW3_PORT
+#define BOARD_SW_GPIO_PIN BOARD_SW3_GPIO_PIN
+#define BOARD_SW_IRQ BOARD_SW3_IRQ
+#define BOARD_SW_IRQ_HANDLER BOARD_SW3_IRQ_HANDLER
+#define BOARD_SW_NAME BOARD_SW3_NAME
+
+/* Task priorities. */
+#define PRINT_TASK_PRIORITY     (configMAX_PRIORITIES - 3)
+#define SYNCHRONOUS_TASK_PRIORITY    (configMAX_PRIORITIES - 2)
+#define ASYNCHRONOUS_TASK_PRIORITY    (configMAX_PRIORITIES - 2)
+#define INTERRUPT_TASK_PRIORITY    (configMAX_PRIORITIES - 1)
+
+/*******************************************************************************
+ * Prototypes
+ ******************************************************************************/
+static void print_task(void *pvParameters);
+static void synchronous_task(void *pvParameters);
+static void asynchronous_task(void *pvParameters);
+static void interrupt_task(void *pvParameters);
+void BOARD_SW_IRQ_HANDLER(void);
+
+SemaphoreHandle_t xSemaphore;
+QueueHandle_t xQueue;
+
+typedef enum BOOL{
+	False,
+	True
+} Bool;
+
+struct messaje{
+	Bool es_asyn;   //Es sincrono/asincrono
+	void *ptro;
+} send, recv ;
+
+
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
+
+/*!
+ * @brief Main function
+ */
+
+int main(void)
+{
+	/* Define the init structure for the input switch pin */
+	gpio_pin_config_t sw_config = {
+		kGPIO_DigitalInput, 0,
+	};
+
+    /* Init board hardware. */
+    BOARD_InitPins();
+    BOARD_BootClockRUN();
+    BOARD_InitDebugConsole();
+
+    /* Init input switch GPIO. */
+//	PORT_SetPinInterruptConfig(BOARD_SW_PORT, BOARD_SW_GPIO_PIN, kPORT_InterruptFallingEdge);
+//	EnableIRQ(BOARD_SW_IRQ);
+//	GPIO_PinInit(BOARD_SW_GPIO, BOARD_SW_GPIO_PIN, &sw_config);
+
+    vTraceInitTraceData();
+
+    if (!uiTraceStart())
+    {
+        vTraceConsoleMessage("No se pudo iniciar Tracealizer!");
+    }
+
+    xSemaphore = xSemaphoreCreateBinary();
+    xQueue = xQueueCreate( 10, sizeof( send ) );
+
+    xTaskCreate(print_task, "print_task", configMINIMAL_STACK_SIZE, NULL, PRINT_TASK_PRIORITY, NULL);
+    xTaskCreate(synchronous_task, "synchronous_task", configMINIMAL_STACK_SIZE, NULL, SYNCHRONOUS_TASK_PRIORITY, NULL);
+    xTaskCreate(asynchronous_task, "asynchronous_task", configMINIMAL_STACK_SIZE, NULL, ASYNCHRONOUS_TASK_PRIORITY, NULL);
+    xTaskCreate(interrupt_task, "interrupt_task", configMINIMAL_STACK_SIZE, NULL, INTERRUPT_TASK_PRIORITY, NULL);
+    vTaskStartScheduler();
+    while(1);
+}
+
+static void print_task(void *pvParameters){
+	static unsigned short num = 0;
+	static char *phrase;
+	for(;;) {
+		xQueueReceive( xQueue, &recv, ( TickType_t ) 99999999 );
+		/* Print Asynchronous Task */
+		if(recv.es_asyn){
+			phrase = ((char*) recv.ptro);
+			PRINTF("Asynch_Data: ");
+			while(*phrase != '\0'){
+				PRINTF("%c", *phrase);
+				phrase++;
+			}
+			PRINTF("\r\n");
+		}
+		/* Print Synchronous Task */
+		else{
+			num = *((unsigned short*) recv.ptro);
+			PRINTF("Synch_Data: %u \r\n", num);
+		}
+	}
+}
+
+static void synchronous_task(void *pvParameters){
+	static unsigned short num = 0;
+	for(;;) {
+		vTaskDelay(500);
+		num = rand() % 99 + 1;
+		send.es_asyn = False;
+		send.ptro = &num;
+		xQueueSend( xQueue, &send, ( TickType_t ) 10 );
+	}
+}
+
+static void asynchronous_task(void *pvParameters){
+	static unsigned short num_phrase = 0;
+	for(;;) {
+		xSemaphoreTake( xSemaphore, 999999 );
+		num_phrase = rand() % 4 + 1;
+		send.es_asyn = True;
+
+		if(num_phrase == 1){
+			send.ptro = "hola";
+		}
+		else if (num_phrase == 2){
+			send.ptro = "soy una tarea asincrona";
+		}
+		else if (num_phrase == 3){
+			send.ptro = "aparezco cuando quiero";
+		}
+		else{
+			send.ptro = "chau";
+		}
+
+		xQueueSend( xQueue, &send, ( TickType_t ) 10 );
+	}
+}
+
+static void interrupt_task(void *pvParameters){
+	int time;
+	for(;;) {
+		time = rand() % 5000 + 1000;
+		vTaskDelay(time);
+		xSemaphoreGive( xSemaphore );
+	}
+}
+
+void BOARD_SW_IRQ_HANDLER(void){
+	/* Clear external interrupt flag. */
+    GPIO_ClearPinsInterruptFlags(BOARD_SW_GPIO, 1U << BOARD_SW_GPIO_PIN);
+	xSemaphoreGiveFromISR( xSemaphore, NULL );
+}

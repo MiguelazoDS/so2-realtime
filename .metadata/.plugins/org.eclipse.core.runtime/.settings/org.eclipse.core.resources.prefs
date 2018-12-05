@@ -1,0 +1,4 @@
+description.autobuilding=false
+eclipse.preferences.version=1
+pathvariable.SDK_LPC_RESOURCES=/usr/local/mcuxpresso-ide/ide/plugins/com.nxp.mcuxpresso.core.datamodels.resources_10.2.0.201805151128/override
+version=1
