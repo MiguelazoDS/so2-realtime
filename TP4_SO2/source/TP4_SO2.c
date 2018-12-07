@@ -1,37 +1,3 @@
-/*
- * Copyright 2016-2018 NXP Semiconductor, Inc.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * o Redistributions of source code must retain the above copyright notice, this list
- *   of conditions and the following disclaimer.
- *
- * o Redistributions in binary form must reproduce the above copyright notice, this
- *   list of conditions and the following disclaimer in the documentation and/or
- *   other materials provided with the distribution.
- *
- * o Neither the name of NXP Semiconductor, Inc. nor the names of its
- *   contributors may be used to endorse or promote products derived from this
- *   software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
- 
-/**
- * @file    TP4_SO2.c
- * @brief   Application entry point.
- */
 #include <stdio.h>
 #include "board.h"
 #include "peripherals.h"
@@ -40,23 +6,26 @@
 #include "MK64F12.h"
 #include "string.h"
 #include <stdlib.h>
-/* TODO: insert other include files here. */
+
 /*Se incluye FreeRTOS.h para poder crear tareas y ejecutar el Scheduler*/
 #include "FreeRTOS.h"
 #include "task.h"
-/*Necesario para la comunicación entre dos tareas.*/
+
+/*Necesario para la comunicación entre dos tareas mediante la cola.*/
 #include "queue.h"
-/* TODO: insert other definitions and declarations here. */
+
+/*Una estructura que guarda los mensajes que se escriben y guardan en la cola.*/
 typedef struct A_Message
 {
  char ucMessageID;
  char ucData[ 20 ];
 } AMessage;
 
+/*Definición de constantes.*/
 #define QUEUE_LENGTH 10
 #define QUEUE_ITEM_SIZE sizeof(AMessage)
 
-/*Definimos una función usando la convención*/
+/*Definimos una función usando la convención que imprime "Hello World".*/
 void vPrint(void *pvParameter){
     for(;;){
     	printf("Hello World\n");
@@ -64,10 +33,14 @@ void vPrint(void *pvParameter){
     }
 }
 
+/*Tarea vProductor que escribe "Hola Mundo!" y "Chau Mundo!" en una cola.*/
 void vProductor(void *pvParameter){
+	/*Declara una variable local donde se guarda la cola que recibe desde main.*/
     QueueHandle_t xQueue;
     xQueue = (QueueHandle_t) pvParameter;
+    /*Variable donde se guarda el mensaje.*/
     AMessage xMessage;
+
     for(;;){
 		strcpy(xMessage.ucData, "Hola Mundo!");
 		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS )
@@ -87,11 +60,17 @@ void vProductor(void *pvParameter){
     }
 }
 
+/*Función que genera cadenas aleatorias de tamaño también aleatorio y
+ * las guarda en una cola*/
 void vTeclado (void *pvParameter){
+	/*Declara una variable local donde se guarda la cola que recibe desde main.*/
 	QueueHandle_t xQueue;
 	xQueue = (QueueHandle_t) pvParameter;
+    /*Variable donde se guarda el mensaje.*/
 	AMessage xMessage;
+	/*Variable donde se guarda el valor aleatorio de delay.*/
 	TickType_t pxDelay;
+
 	int i;
 	int longitud;
 
@@ -116,10 +95,13 @@ void vTeclado (void *pvParameter){
 }
 
 void vSensor (void *pvParameter){
-	int temperatura;
+	/*Declara una variable local donde se guarda la cola que recibe desde main.*/
 	QueueHandle_t xQueue;
 	xQueue = (QueueHandle_t) pvParameter;
+    /*Variable donde se guarda el mensaje.*/
 	AMessage xMessage;
+
+	int temperatura;
 
 	for(;;){
 		temperatura=rand()%45+10;
@@ -133,9 +115,13 @@ void vSensor (void *pvParameter){
 }
 
 void vConsumidor(void *pvParameter){
+	/*Declara una variable local donde se guarda la cola que recibe desde main.*/
     QueueHandle_t xQueue;
     xQueue = (QueueHandle_t) pvParameter;
+
+    /*Variable donde se guarda el mensaje.*/
     AMessage xMessage;
+
     for(;;){
 		if( xQueueReceive( xQueue, &xMessage, portMAX_DELAY ) != pdPASS ){
 			printf("No se leyó nada de la cola\n");
@@ -144,31 +130,31 @@ void vConsumidor(void *pvParameter){
     }
 }
 
-/*
- * @brief   Application entry point.
- */
 int main(void) {
   	/* Init board hardware. */
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
+
     /*No se puede correr el programa si no está esta línea.
      El programa finaliza en xTaskCreate() o en la creación de la cola.
-     Debe ser la primer línea.*/
+     Debe ser la primer línea y es necesaria para comenzar a grabar.*/
     vTraceEnable(TRC_START);
 
     /*Creamos una cola*/
     QueueHandle_t xQueue;
     xQueue = xQueueCreate( QUEUE_LENGTH, QUEUE_ITEM_SIZE );
 
-    /*No agreamos esta tarea*/
+    /*Agregamos las siguientes tareas*/
     /*xTaskCreate(vPrint, "vPrint", 240, NULL, 1, NULL);*/
     /*xTaskCreate(vProductor, "Productor", 240, (void *)xQueue, 1, NULL);*/
     xTaskCreate(vTeclado, "Teclado", 240, (void *)xQueue, 1, NULL);
     xTaskCreate(vSensor, "Sensor", 240, (void*)xQueue, 1, NULL);
     xTaskCreate(vConsumidor, "Consumidor", 240, (void *)xQueue, 2, NULL);
 
+    /*El planificador se encarga de gestionar las tareas agregadas.*/
     vTaskStartScheduler();
+
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
     /* Enter an infinite loop, just incrementing a counter. */
@@ -177,4 +163,3 @@ int main(void) {
     }
     return 0 ;
 }
-
