@@ -140,7 +140,7 @@ void vConsumidor(void *pvParameter){
 		}
 		if(xMessage.es_num == 1){
 			num=*((uint8_t*) xMessage.pointer);
-			printf("Leí de la cola el mensaje: %d\n",num);//.ucData);
+			printf("Leí de la cola el mensaje: %d que tiene un tamaño de: %d byte\n",num, sizeof(num));//.ucData);
 		}
 		else
 			printf("Leí de la cola el mensaje: %s\n",(char*)xMessage.pointer);
