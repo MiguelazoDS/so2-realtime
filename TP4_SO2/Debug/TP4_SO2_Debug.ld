@@ -1,11 +1,11 @@
 /*
  * GENERATED FILE - DO NOT EDIT
  * (c) Code Red Technologies Ltd, 2008-2013
- * (c) NXP Semiconductors 2013-2018
+ * (c) NXP Semiconductors 2013-2019
  * Generated linker script file for MK64FN1M0xxx12
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.2.0 [Build 759] [2018-05-15] on Dec 7, 2018 8:27:26 PM
+ * MCUXpresso IDE v10.2.0 [Build 759] [2018-05-15] on Feb 8, 2019 1:06:59 PM
  */
 
 INCLUDE "TP4_SO2_Debug_library.ld"

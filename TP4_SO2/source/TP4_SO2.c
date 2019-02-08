@@ -17,8 +17,10 @@
 /*Una estructura que guarda los mensajes que se escriben y guardan en la cola.*/
 typedef struct A_Message
 {
- char ucMessageID;
- char ucData[ 20 ];
+ //char ucMessageID;
+ //char ucData[ 20 ];
+ int es_num;
+ void *pointer;
 } AMessage;
 
 /*Definición de constantes.*/
@@ -40,22 +42,25 @@ void vProductor(void *pvParameter){
     xQueue = (QueueHandle_t) pvParameter;
     /*Variable donde se guarda el mensaje.*/
     AMessage xMessage;
+    char msg[20];
 
     for(;;){
-		strcpy(xMessage.ucData, "Hola Mundo!");
+		//strcpy(xMessage.ucData, "Hola Mundo!");
+    	strcpy(msg, "Hola Mundo!");
 		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS )
 		{
 			printf("No se pudo escribir en la cola\n");
 		}
-		printf("Guardo en la cola: %s\n", xMessage.ucData);
+		printf("Guardo en la cola: %s\n", msg);//xMessage.ucData);
 		vTaskDelay(2000/portTICK_RATE_MS);
 
-		strcpy(xMessage.ucData, "Chau Mundo!");
+		//strcpy(xMessage.ucData, "Chau Mundo!");
+		strcpy(msg,"Chau Mundo!");
 		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS )
 		{
 			printf("No se pudo escribir en la cola\n");
 		}
-		printf("Guardo en la cola: %s\n", xMessage.ucData);
+		printf("Guardo en la cola: %s\n", msg);//xMessage.ucData);
 		vTaskDelay(2000/portTICK_RATE_MS);
     }
 }
@@ -73,22 +78,27 @@ void vTeclado (void *pvParameter){
 
 	int i;
 	int longitud;
-
+	char msg[20];
+	xMessage.es_num=0;
 	for(;;){
 		for(i=0;i<20;i++){
-			xMessage.ucData[i]='\0';
+			//xMessage.ucData[i]='\0';
+			msg[i]='\0';
 		}
 		longitud = rand()%19+1;
 		pxDelay = rand()%3000+500;
 		for(i=0;i<longitud;i++){
-			xMessage.ucData[i]=rand()%25+97;
+			//xMessage.ucData[i]=rand()%25+97;
+			msg[i]=rand()%25+97;
 		}
-		printf("Escribo el siguiente texto: %s\n", xMessage.ucData);
+		xMessage.pointer=&msg;
+		printf("Escribo el siguiente texto: %s\n", msg);//xMessage.ucData);
 		if( xQueueSendToBack( xQueue, &xMessage, 3500/portTICK_RATE_MS ) != pdPASS ){
 			printf("No se pudo escribir en la cola\n");
 		}
 		for(i=0;i<20;i++){
-			xMessage.ucData[i]='\0';
+			//xMessage.ucData[i]='\0';
+			msg[i]='\0';
 		}
 		vTaskDelay(pxDelay/portTICK_RATE_MS);
 	}
@@ -101,11 +111,12 @@ void vSensor (void *pvParameter){
     /*Variable donde se guarda el mensaje.*/
 	AMessage xMessage;
 
-	int temperatura;
-
+	uint8_t temperatura;
+	xMessage.es_num=1;
 	for(;;){
 		temperatura=rand()%45+10;
-		itoa(temperatura,xMessage.ucData,10);
+        //itoa(temperatura,xMessage.ucData,10);
+		xMessage.pointer=&temperatura;
 		printf("Lectura del sensor: %d\n", temperatura);
 		if( xQueueSendToBack( xQueue, &xMessage, 2000/portTICK_RATE_MS ) != pdPASS ){
 			printf("No se pudo escribir en la cola\n");
@@ -121,12 +132,18 @@ void vConsumidor(void *pvParameter){
 
     /*Variable donde se guarda el mensaje.*/
     AMessage xMessage;
+    uint8_t num;
 
     for(;;){
 		if( xQueueReceive( xQueue, &xMessage, portMAX_DELAY ) != pdPASS ){
 			printf("No se leyó nada de la cola\n");
 		}
-		printf("Leí de la cola el mensaje: %s\n",xMessage.ucData);
+		if(xMessage.es_num == 1){
+			num=*((uint8_t*) xMessage.pointer);
+			printf("Leí de la cola el mensaje: %d\n",num);//.ucData);
+		}
+		else
+			printf("Leí de la cola el mensaje: %s\n",(char*)xMessage.pointer);
     }
 }
 
